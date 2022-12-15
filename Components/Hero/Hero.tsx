@@ -4,14 +4,14 @@ import { GoLocation } from 'react-icons/go'
 const Hero = () => {
   return (
     <div
-      className={` bg-lightPurple h-[480px] bg-contain bg-no-repeat bg-right bg-[url('/images/heroImage.png')] px-20 py-[60px]`}
+      className={` bg-lightPurple h-[480px] bg-contain bg-no-repeat bg-right bg-[url('/images/heroImage.png')] px-20 py-[60px] mb-10 `}
     >
       <h3 className='text-2xl text-pink'>Best place to sell it!</h3>
       <h2 className='text-4xl w-[500px] mt-3 font-Montserrat text-[#0D0E43]'>
         Buying or selling as a student has never been easier
       </h2>
       <button className='bg-deepGreen shadow-[13px_18px_13px_rgba(130,178,182,0.41)] px-[60px] hover:shadow-[3px_5px_10px_rgba(130,178,182,0.41)] hover:ease-in transition duration-150 ease-out py-3 rounded-lg text-white text-xl mt-5 '>
-        Sell it
+        Start Selling
       </button>
 
       <div className='mt-[50px] w-[100%] px-10 flex items-center justify-center  space-x-6'>

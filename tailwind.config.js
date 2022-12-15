@@ -1,11 +1,26 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './app/*.{js,ts,jsx,tsx}', // Note the addition of the `app` directory.
+    './*.{js,ts,jsx,tsx}', // Note the addition of the `app` directory.
     './pages/*.{js,ts,jsx,tsx}',
-    './components/*.{js,ts,jsx,tsx}'
+    './components/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
+    colors: {
+      pink: '#fb2e86',
+      red: '#fb2448',
+      blue: '#2f1ac4',
+      skyBlue: '#f2f5ff',
+      navyBlue: '#151875',
+      offBlue: '#151875',
+      offNavyBlue: '#3f509e',
+      pantonePurple: '#fbfafe',
+      lightPurple: '#f2f0ff',
+      purple: '#7e33e0',
+      offPurple: '#9563b5',
+      deepGreen: '#428c91',
+      white: '#ffffff'
+    },
     extend: {
       fontFamily: {
         Josefin: ['Josefin Sans', 'san-serif'],

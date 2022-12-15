@@ -1,13 +1,22 @@
 import { NextPage } from 'next'
-import React from 'react'
+import Head from 'next/head'
+import ProductCard from '../Components/Cards/ProductCard'
+import Hero from '../Components/Hero/Hero'
+import HeaderNav from '../Components/Navigation/HeaderNav/HeaderNav'
+import TopNav from '../Components/Navigation/TopNav/TopNav'
 
 type Props = {}
 
-const Home = (props: Props) => {
+const Home: NextPage = (props: Props) => {
   return (
     <>
-      <p className='font-Josefin '>The boy is like a fox</p>
-      <p>this is a step</p>
+      <Head>
+        <title>OjaSchool - Marketplace</title>
+      </Head>
+      <TopNav />
+      <HeaderNav />
+      <Hero />
+      {/* <ProductCard /> */}
     </>
   )
 }

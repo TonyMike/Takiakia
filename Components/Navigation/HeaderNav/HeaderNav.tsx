@@ -13,7 +13,9 @@ const HeaderNav = () => {
             )
           })}
         </ul>
-        <button className='pink-btn'>Sell Now</button>
+        <button className='pink-btn ease-in-out duration-300 hover:scale-105'>
+          Sell Now
+        </button>
       </nav>
     </header>
   )

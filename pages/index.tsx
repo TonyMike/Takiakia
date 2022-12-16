@@ -19,16 +19,8 @@ const Home: NextPage = (props: Props) => {
       </Head>
       {/* <TopNav /> */}
       {/* <HeaderNav /> */}
-      {/* <Hero /> */}
+      <Hero />
       <main className='px-5 sm:px-5 md:px-10 lg:px-20 flex space-x-3 md:space-x-7'>
-        {/* <Grid container direction={'row'} justifyContent='space-between'>
-          <Grid item className='hidden sm:block'>
-            <Category />
-          </Grid>
-          <Grid item className='bg-blue w-full' xs={12} sm={7.5}>
-            <ProductList />
-          </Grid>
-        </Grid> */}
         <div className='hidden md:block'>
           <Category />
         </div>

@@ -1,3 +1,5 @@
+import { Grid } from '@mui/material'
+import Image from 'next/image'
 import { TfiMenuAlt } from 'react-icons/tfi'
 
 const Category = () => {
@@ -14,27 +16,58 @@ const Category = () => {
     { name: 'Musical Instrument', icon: 'text' }
   ]
   return (
-    <div className=' bg-white shadow-md '>
-      <h3 className='flex pl-5 pr-20  py-5 md:pl-10 items-center space-x-2'>
-        <span className='mb-1'>
-          <TfiMenuAlt />
-        </span>
-        <span className='text-[20px] '>Categories</span>
-      </h3>
+    <div className=' bg-white h-[100%] md:shadow-md '>
+      {/* mobile category */}
+      <div className=' md:hidden'>
+        <Grid container rowGap={1.5} columnGap={1.5}>
+          {categories.map((category, index) => {
+            return (
+              <Grid
+                key={index}
+                item
+                xs={3.7}
+                sm={2.7}
+                className='bg-[#F7FAFE] p-4 flex flex-col space-y-2 justify-between items-center'
+              >
+                <div className='h-[50px] w-[50px] rounded-full relative'>
+                  <Image
+                    src='/images/iphone13.jpg'
+                    layout='fill'
+                    alt='icon'
+                    className=' rounded-full h-full w-full'
+                  />
+                </div>
+                <p className='text-[13px] text-navyBlue font-semibold capitalize text-center'>
+                  {category.name}
+                </p>
+              </Grid>
+            )
+          })}
+        </Grid>
+      </div>
+      {/* desktop categories */}
+      <div className='hidden md:block'>
+        <h3 className='flex pl-5 pr-20  py-5 md:pl-10 items-center space-x-2'>
+          <span className='mb-1'>
+            <TfiMenuAlt />
+          </span>
+          <span className='text-[20px] '>Categories</span>
+        </h3>
 
-      {/* category list */}
-      <ul>
-        {categories.map((category, index) => {
-          return (
-            <li
-              key={index}
-              className='capitalize pl-5 p-20 pr-1 py-2 md:pl-10 text-[15px] text-[#3d3d3d] hover:bg-pink hover:text-white transition-all ease-in-out duration-200 cursor-pointer hover:ease-in '
-            >
-              {category.name}
-            </li>
-          )
-        })}
-      </ul>
+        {/* category list */}
+        <ul>
+          {categories.map((category, index) => {
+            return (
+              <li
+                key={index}
+                className='capitalize pl-5 p-20 pr-1 py-2 md:pl-10 text-[15px] text-[#3d3d3d] hover:bg-pink hover:text-white transition-all ease-in-out duration-200 cursor-pointer hover:ease-in '
+              >
+                {category.name}
+              </li>
+            )
+          })}
+        </ul>
+      </div>
     </div>
   )
 }

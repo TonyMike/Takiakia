@@ -18,12 +18,11 @@ const Home: NextPage = (props: Props) => {
         <title>OjaSchool - Marketplace</title>
       </Head>
       {/* <TopNav /> */}
-      {/* <HeaderNav /> */}
+      <HeaderNav />
       <Hero />
-      <main className='px-5 sm:px-5 md:px-10 lg:px-20 flex space-x-3 md:space-x-7'>
-        <div className='hidden md:block'>
-          <Category />
-        </div>
+      <main className='px-5 sm:px-5 md:px-10 lg:px-20 flex flex-col md:flex-row space-x-3 md:space-x-7'>
+        <Category />
+
         <div className=' grow '>
           <ProductList />
         </div>

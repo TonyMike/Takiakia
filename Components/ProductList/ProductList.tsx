@@ -15,40 +15,40 @@ const ProductList = () => {
           justifyContent='space-between'
           // columnGap={0.5}
         >
-          <Grid item xs={5.7} sm={5.7} md={4}>
+          <Grid item xs={5.7} sm={5.7} md={3.9}>
             <ProductCard productCondition={'new'} />
           </Grid>
-          <Grid item xs={5.7} sm={5.7} md={4}>
+          <Grid item xs={5.7} sm={5.7} md={3.9}>
             <ProductCard productCondition={'used'} />
           </Grid>
-          <Grid item xs={5.7} sm={5.7} md={4}>
+          <Grid item xs={5.7} sm={5.7} md={3.9}>
             <ProductCard productCondition={'new'} />
           </Grid>
-          <Grid item xs={5.7} sm={5.7} md={4}>
+          <Grid item xs={5.7} sm={5.7} md={3.9}>
             <ProductCard productCondition={'new'} />
           </Grid>
-          <Grid item xs={5.7} sm={5.7} md={4}>
+          <Grid item xs={5.7} sm={5.7} md={3.9}>
             <ProductCard productCondition={'used'} />
           </Grid>
-          <Grid item xs={5.7} sm={5.7} md={4}>
+          <Grid item xs={5.7} sm={5.7} md={3.9}>
             <ProductCard productCondition={'new'} />
           </Grid>
-          <Grid item xs={5.7} sm={5.7} md={4}>
+          <Grid item xs={5.7} sm={5.7} md={3.9}>
             <ProductCard productCondition={'new'} />
           </Grid>
-          <Grid item xs={5.7} sm={5.7} md={4}>
+          <Grid item xs={5.7} sm={5.7} md={3.9}>
             <ProductCard productCondition={'used'} />
           </Grid>
-          <Grid item xs={5.7} sm={5.7} md={4}>
+          <Grid item xs={5.7} sm={5.7} md={3.9}>
             <ProductCard productCondition={'new'} />
           </Grid>
-          <Grid item xs={5.7} sm={5.7} md={4}>
+          <Grid item xs={5.7} sm={5.7} md={3.9}>
             <ProductCard productCondition={'new'} />
           </Grid>
-          <Grid item xs={5.7} sm={5.7} md={4}>
+          <Grid item xs={5.7} sm={5.7} md={3.9}>
             <ProductCard productCondition={'used'} />
           </Grid>
-          <Grid item xs={5.7} sm={5.7} md={4}>
+          <Grid item xs={5.7} sm={5.7} md={3.9}>
             <ProductCard productCondition={'new'} />
           </Grid>
         </Grid>

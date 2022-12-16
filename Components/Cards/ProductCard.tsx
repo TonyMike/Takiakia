@@ -10,7 +10,7 @@ const ProductCard = ({ productCondition }: { productCondition: string }) => {
       >
         {productCondition}
       </p>
-      <div className='w-full h-[120px] sm:h-32 md:h-40'>
+      <div className='w-full h-[120px] sm:h-32 md:h-40 lg:h-[165px]'>
         <Image
           src='/images/iphone13.jpg'
           height={100}
@@ -19,9 +19,9 @@ const ProductCard = ({ productCondition }: { productCondition: string }) => {
           className='h-full w-full'
         />
       </div>
-      <h6 className='text-[16px] my-2'>Iphone 13 pro max</h6>
+      <h6 className='text-[16px] my-1 md:my-2'>Iphone 13 pro max</h6>
       <p className='font-Josefin text-navyBlue'>N 560,000</p>
-      <p className='text-[rgba(0,0,0,0.7)] text-[13px] my-1'>
+      <p className='text-[rgba(0,0,0,0.7)] text-[13px]  md:my-1'>
         Location: FPE, Osun
       </p>
     </div>

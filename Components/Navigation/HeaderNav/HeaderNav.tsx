@@ -1,7 +1,7 @@
 const HeaderNav = () => {
   const links = ['Home', 'About us', 'Blog', 'FAQ']
   return (
-    <header className='sticky top-0 bg-lightPurple'>
+    <header className='sticky top-0 bg-lightPurple z-10'>
       <nav className='flex justify-between items-center px-20 py-3'>
         <div className='Josefin text-4xl'>logo</div>
         <ul className='flex'>

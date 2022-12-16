@@ -1,3 +1,4 @@
+import { Grid } from '@mui/material'
 import { NextPage } from 'next'
 import Head from 'next/head'
 import BlogSection from '../Components/BlogSection/BlogSection'
@@ -5,6 +6,7 @@ import Category from '../Components/Category/Category'
 import Hero from '../Components/Hero/Hero'
 import HeaderNav from '../Components/Navigation/HeaderNav/HeaderNav'
 import TopNav from '../Components/Navigation/TopNav/TopNav'
+import ProductList from '../Components/ProductList/ProductList'
 import TeamMember from '../Components/TeamMember/Team'
 
 type Props = {}
@@ -15,11 +17,24 @@ const Home: NextPage = (props: Props) => {
       <Head>
         <title>OjaSchool - Marketplace</title>
       </Head>
-      <TopNav />
-      <HeaderNav />
-      <Hero />
-      <main className='px-20 flex'>
-        <Category />
+      {/* <TopNav /> */}
+      {/* <HeaderNav /> */}
+      {/* <Hero /> */}
+      <main className='px-5 sm:px-5 md:px-10 lg:px-20 flex space-x-3 md:space-x-7'>
+        {/* <Grid container direction={'row'} justifyContent='space-between'>
+          <Grid item className='hidden sm:block'>
+            <Category />
+          </Grid>
+          <Grid item className='bg-blue w-full' xs={12} sm={7.5}>
+            <ProductList />
+          </Grid>
+        </Grid> */}
+        <div className='hidden md:block'>
+          <Category />
+        </div>
+        <div className=' grow '>
+          <ProductList />
+        </div>
       </main>
       <BlogSection />
       <TeamMember />

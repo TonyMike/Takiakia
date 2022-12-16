@@ -14,8 +14,8 @@ const Category = () => {
     { name: 'Musical Instrument', icon: 'text' }
   ]
   return (
-    <div className=' bg-white shadow-md'>
-      <h3 className='flex px-10 py-5 items-center space-x-2'>
+    <div className=' bg-white shadow-md '>
+      <h3 className='flex pl-5 pr-20  py-5 md:pl-10 items-center space-x-2'>
         <span className='mb-1'>
           <TfiMenuAlt />
         </span>
@@ -28,7 +28,7 @@ const Category = () => {
           return (
             <li
               key={index}
-              className='capitalize px-10 py-2 text-[15px] text-[#3d3d3d] hover:bg-pink hover:text-white transition-all ease-in-out duration-200 cursor-pointer hover:ease-in '
+              className='capitalize pl-5 p-20 pr-1 py-2 md:pl-10 text-[15px] text-[#3d3d3d] hover:bg-pink hover:text-white transition-all ease-in-out duration-200 cursor-pointer hover:ease-in '
             >
               {category.name}
             </li>

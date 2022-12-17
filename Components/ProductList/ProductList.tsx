@@ -13,7 +13,6 @@ const ProductList = () => {
           direction='row'
           rowGap={2}
           justifyContent='space-between'
-          // columnGap={0.5}
         >
           <Grid item xs={5.7} sm={5.7} md={3.9}>
             <ProductCard productCondition={'new'} />

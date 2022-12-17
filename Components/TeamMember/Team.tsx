@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 const TeamMember = () => {
   return (
     <div className='bg-slate-200 p-4'>
@@ -98,7 +100,8 @@ const TeamMember = () => {
         <div className='relative p-4'>
           <div className='absolute mb-4 text-center transform translate-x-1/2 -top-16 right-1/2'>
             <span className='relative block'>
-              <img
+              <Image
+                layout='fill'
                 alt='profil'
                 src='/images/tony.jpg'
                 className='mx-auto object-cover rounded-lg h-40 w-40  border-2 border-white dark:border-gray-800'

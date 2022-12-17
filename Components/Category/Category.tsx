@@ -6,6 +6,8 @@ const Category = () => {
   const categories = [
     { name: 'Phones & Tablets', icon: 'text' },
     { name: 'Electronics', icon: 'text' },
+    { name: 'computer', icon: 'text' },
+    { name: 'Electronics', icon: 'text' },
     { name: 'fashion', icon: 'text' },
     { name: 'Sport', icon: 'text' },
     { name: 'Beauty', icon: 'text' },
@@ -18,8 +20,8 @@ const Category = () => {
   return (
     <div className=' bg-white h-[100%] md:shadow-md '>
       {/* mobile category */}
-      <div className=' md:hidden'>
-        <Grid container rowGap={1.5} columnGap={1.5}>
+      <div className=' md:hidden mb-4'>
+        <Grid container rowGap={1.2} columnGap={1.2}>
           {categories.map((category, index) => {
             return (
               <Grid

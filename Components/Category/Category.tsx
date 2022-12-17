@@ -30,6 +30,7 @@ const Category = () => {
                 xs={3.7}
                 sm={2.7}
                 container
+                justifyContent='center'
                 className='bg-[#F7FAFE] px-2 py-4 sm:px-4 flex flex-col sm:flex-col space-y-2 justify-between items-center'
               >
                 <Grid item className='h-[50px] w-[50px] rounded-full relative'>

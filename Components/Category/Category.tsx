@@ -29,19 +29,22 @@ const Category = () => {
                 item
                 xs={3.7}
                 sm={2.7}
-                className='bg-[#F7FAFE] p-4 flex flex-col space-y-2 justify-between items-center'
+                container
+                className='bg-[#F7FAFE] px-2 py-4 sm:px-4 flex flex-col sm:flex-col space-y-2 justify-between items-center'
               >
-                <div className='h-[50px] w-[50px] rounded-full relative'>
+                <Grid item className='h-[50px] w-[50px] rounded-full relative'>
                   <Image
                     src='/images/iphone13.jpg'
                     layout='fill'
                     alt='icon'
                     className=' rounded-full h-full w-full'
                   />
-                </div>
-                <p className='text-[13px] text-navyBlue font-semibold capitalize text-center'>
-                  {category.name}
-                </p>
+                </Grid>
+                <Grid>
+                  <p className='text-[12px] sm:text-[13px] text-navyBlue font-semibold capitalize text-center'>
+                    {category.name}
+                  </p>
+                </Grid>
               </Grid>
             )
           })}

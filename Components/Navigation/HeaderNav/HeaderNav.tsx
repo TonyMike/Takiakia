@@ -15,6 +15,9 @@ const HeaderNav = () => {
   }
   return (
     <header className=' sticky top-0 bg-white md:bg-lightPurple shadow-md md:shadow-none z-10'>
+      {show ? (
+        <div className='h-screen absolute w-full bg-none top-[67px] '></div>
+      ) : null}
       {/* mobile header */}
       <nav className='md:hidden flex justify-between items-center py-4 px-4 pr-2 sm:px-10 '>
         <h2>Logo</h2>
@@ -24,9 +27,35 @@ const HeaderNav = () => {
           </button>
           <button>
             {show ? (
-              <CgClose onClick={close} fontSize={30} />
+              <motion.div
+                initial={{
+                  opacity: 0
+                }}
+                animate={{
+                  opacity: 1
+                }}
+                transition={{
+                  duration: 0.5,
+                  ease: 'easeOut'
+                }}
+              >
+                <CgClose onClick={close} fontSize={30} />
+              </motion.div>
             ) : (
-              <RiMenu3Fill onClick={open} fontSize={30} />
+              <motion.div
+                initial={{
+                  opacity: 0
+                }}
+                animate={{
+                  opacity: 1
+                }}
+                transition={{
+                  duration: 0.5,
+                  ease: 'easeOut'
+                }}
+              >
+                <RiMenu3Fill onClick={open} fontSize={30} />
+              </motion.div>
             )}
           </button>
         </div>
@@ -34,30 +63,33 @@ const HeaderNav = () => {
         {show ? (
           <motion.div
             initial={{
-              transform: 'translateX(100%)'
+              opacity: 0
             }}
             animate={{
-              transform: 'translateX(0%)'
+              opacity: 1
             }}
-            className='h-screen flex justify-end w-full absolute right-0 top-0 pt-[67px] z-[-10] transition-all duration-75'
+            transition={{
+              duration: 0.5,
+              ease: 'easeOut'
+            }}
+            className='absolute  right-0 bg-white h-screen top-[67px] shadow-md  w-1/2 md:w-2/5  '
           >
-            <div className='bg-white w-1/2 sm:w-2/5 relative '>
-              <ul>
-                {links.map((list, index) => {
-                  return (
-                    <li
-                      key={index}
-                      className='hover:bg-deepGreen text-[14px] sm:text-[16px] hover:text-white cursor-pointer px-7 p-3'
-                    >
-                      {list}
-                    </li>
-                  )
-                })}
-              </ul>
-            </div>
+            <ul>
+              {links.map((list, index) => {
+                return (
+                  <li
+                    key={index}
+                    className='hover:bg-deepGreen  text-[14px] sm:text-[16px] hover:text-white cursor-pointer px-7 p-3'
+                  >
+                    {list}
+                  </li>
+                )
+              })}
+            </ul>
           </motion.div>
         ) : null}
       </nav>
+
       {/* desktop header */}
       <nav className='hidden md:flex justify-between items-center px-20 py-3'>
         <div className='Josefin text-4xl'>logo</div>

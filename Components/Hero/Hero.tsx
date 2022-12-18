@@ -9,7 +9,7 @@ const Hero = () => {
       {/* hero message */}
       <div className='hidden md:block'>
         <h3 className='text-2xl text-pink'>Best place to sell it!</h3>
-        <h2 className='text-4xl w-[500px] mt-3 font-Montserrat text-[#0D0E43]'>
+        <h2 className='text-4xl w-[500px] mt-3 font-Poppins text-[#0D0E43]'>
           Buying and selling as a student has never been easier
         </h2>
         <button className='bg-deepGreen shadow-[13px_18px_13px_rgba(130,178,182,0.41)] px-[60px] hover:shadow-[3px_5px_10px_rgba(130,178,182,0.41)] hover:ease-in transition duration-150 ease-out py-3 rounded-lg text-white text-xl mt-5 '>
@@ -18,7 +18,7 @@ const Hero = () => {
       </div>
 
       <div className='md:hidden'>
-        <h2 className='text-xl  mt-3 font-Josefin text-center text-[deepGreen]'>
+        <h2 className='text-xl  mt-3 font-Poppins text-center text-[deepGreen]'>
           Student shopping made easy
         </h2>
       </div>
@@ -30,7 +30,7 @@ const Hero = () => {
           <input
             type='text'
             placeholder='Looking for something...'
-            className=' min-w-[250px] text-[14px] md:text-[16px] md:w-[500px] h-[100%] border-none outline-none font-Montserrat'
+            className=' min-w-[250px] text-[14px] md:text-[16px] md:w-[500px] h-[100%] border-none outline-none font-Poppins'
           />
           <BsSearch fontSize={20} color={'grey'} className='cursor-pointer' />
         </div>

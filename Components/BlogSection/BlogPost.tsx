@@ -13,7 +13,7 @@ const BlogPost = () => {
           className='object-cover w-full max-h-44 md:max-h-40'
         />
         <div className='w-full p-4'>
-          <p className='font-josefin text-[14px] mb-2 md:mb-5 flex items-center space-x-2'>
+          <p className='font-Poppins text-[14px] mb-2 md:mb-5 flex items-center space-x-2'>
             <span>
               <BiCalendar color='#FFA454' />
             </span>

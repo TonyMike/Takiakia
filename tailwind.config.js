@@ -24,8 +24,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        Josefin: ['Josefin Sans', 'san-serif'],
-        Montserrat: ['Montserrat', 'sans-serif']
+        Poppins: ['Poppins', 'san-serif']
       }
     },
     screens: {

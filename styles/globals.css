@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Montserrat&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -8,11 +7,9 @@
 
 @layer base {
   html {
-    font-family: 'Josefin Sans', system-ui, sans-serif;
+    font-family: 'Poppins', system-ui, sans-serif;
   }
-  p,li{
-    font-family: 'Montserrat', sans-serif;
-  }
+
 }
 
 @layer components {

@@ -92,7 +92,7 @@ const HeaderNav = () => {
 
       {/* desktop header */}
       <nav className='hidden md:flex justify-between items-center px-20 py-3'>
-        <div className='Josefin text-4xl'>logo</div>
+        <div className='Poppins text-4xl'>logo</div>
         <ul className='flex'>
           {links.map(link => {
             return (

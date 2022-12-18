@@ -73,7 +73,7 @@ const Category = () => {
                 className='capitalize  p-20 pr-1 py-2 md:pl-5 lg:pl-6 text-[15px] flex space-x-2 text-[#3d3d3d] hover:bg-pink hover:text-white transition-all ease-in-out duration-200 cursor-pointer hover:ease-in '
               >
                 <Image src={category.icon} width={20} height={20} alt='icon' />
-                <span>{category.name}</span>
+                <span className='text-[13px]'>{category.name}</span>
               </li>
             )
           })}

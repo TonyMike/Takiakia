@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Layout from '../Components/Layout'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 const NotFound = () => {
   return (
@@ -26,10 +27,14 @@ const NotFound = () => {
           >
             <Image src='/images/404.png' layout='fill' alt='404' />
           </motion.div>
-          <p className='text-center text-[14px] mb-10 md:text-[16px]'>
-            {`Unfortunately, we cannot find that page! Everything is still
-            awesome, so don't worry`}
+          <p className='text-center text-[14px] md:text-[16px]'>
+            Hey there! You seem lost. I could help you back home
           </p>
+          <Link href='/' passHref>
+            <button className='outline-none border-none text-xs bg-deepGreen rounded-lg p-3 px-4 my-5 shadow-md text-white'>
+              Take me home
+            </button>
+          </Link>
         </div>
       </Layout>
     </div>

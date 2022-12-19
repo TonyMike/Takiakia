@@ -4,7 +4,8 @@ module.exports = {
   content: [
     './*.{js,ts,jsx,tsx}', // Note the addition of the `app` directory.
     './pages/*.{js,ts,jsx,tsx}',
-    './Components/**/*.{js,ts,jsx,tsx}'
+    './Components/**/*.{js,ts,jsx,tsx}',
+    'Reusable components'
   ],
   theme: {
     colors: {

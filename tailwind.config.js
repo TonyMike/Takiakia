@@ -5,7 +5,7 @@ module.exports = {
     './*.{js,ts,jsx,tsx}', // Note the addition of the `app` directory.
     './pages/*.{js,ts,jsx,tsx}',
     './Components/**/*.{js,ts,jsx,tsx}',
-    'Reusable components'
+    './Reusable/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
     colors: {

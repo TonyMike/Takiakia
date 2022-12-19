@@ -1,4 +1,4 @@
-import SubscribeButton from '../../../Reuseables/SubscribeButton'
+import SubscribeButton from '../../../Reusables/SubscribeButton'
 import {
   AboutLinks,
   ResourcesLinks,

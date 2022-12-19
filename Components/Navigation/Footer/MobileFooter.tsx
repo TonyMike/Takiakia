@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import SubscribeButton from '../../../Reusables/SubscribeButton'
 import {
   AboutLinks,
@@ -18,15 +19,23 @@ const MobileFooter = () => {
           <h3>Support</h3>
           <ul className='text-[12px] [&>*]:my-3 text-[rgba(0,0,0,0.7)]'>
             {SupportLinks.map((link, index) => {
-              return <li key={index}>{link}</li>
+              return (
+                <Link href={link.href} key={index} passHref>
+                  <li className='my-3'>{link.title}</li>
+                </Link>
+              )
             })}
           </ul>
         </div>
         <div>
           <h3>About Us</h3>
-          <ul className='text-[12px] [&>*]:my-3 text-[rgba(0,0,0,0.7)]'>
+          <ul className='text-[12px] text-[rgba(0,0,0,0.7)]'>
             {AboutLinks.map((link, index) => {
-              return <li key={index}>{link}</li>
+              return (
+                <Link href={link.href} key={index} passHref>
+                  <li className='my-3'>{link.title}</li>
+                </Link>
+              )
             })}
           </ul>
         </div>
@@ -47,9 +56,13 @@ const MobileFooter = () => {
 
         <div>
           <h3>Our Resources</h3>
-          <ul className='text-[12px] [&>*]:my-3 text-[rgba(0,0,0,0.7)]'>
+          <ul className='text-[12px] text-[rgba(0,0,0,0.7)]'>
             {ResourcesLinks.map((link, index) => {
-              return <li key={index}>{link}</li>
+              return (
+                <Link href={link.href} key={index} passHref>
+                  <li className='my-3'>{link.title}</li>
+                </Link>
+              )
             })}
           </ul>
         </div>

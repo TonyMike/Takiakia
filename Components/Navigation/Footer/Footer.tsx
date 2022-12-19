@@ -3,7 +3,7 @@ import MobileFooter from './MobileFooter'
 
 const Footer = () => {
   return (
-    <div className='bg-lightPurple'>
+    <div className='bg-lightPurple pt-4'>
       <div className='md:hidden'>
         <MobileFooter />
       </div>

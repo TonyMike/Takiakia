@@ -11,7 +11,7 @@ export const SupportLinks: linksType[] = [
   },
   {
     title: 'Contact Us',
-    href: '/contactUs'
+    href: 'pages/contactUs'
   },
   {
     title: 'FAQ',

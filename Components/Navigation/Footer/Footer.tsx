@@ -3,7 +3,7 @@ import MobileFooter from './MobileFooter'
 
 const Footer = () => {
   return (
-    <>
+    <div className='bg-lightPurple'>
       <div className='md:hidden'>
         <MobileFooter />
       </div>
@@ -15,7 +15,7 @@ const Footer = () => {
           &#169; 2022 <span className='tracking-wider ml-1'>Takiakia</span>
         </p>
       </div>
-    </>
+    </div>
   )
 }
 

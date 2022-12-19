@@ -12,7 +12,7 @@ const Hero = () => {
         <h2 className='text-4xl w-[500px] mt-3 font-Poppins text-[#0D0E43]'>
           Buying and selling as a student has never been easier
         </h2>
-        <button className='bg-deepGreen shadow-[13px_18px_13px_rgba(130,178,182,0.41)] px-[60px] hover:shadow-[3px_5px_10px_rgba(130,178,182,0.41)] hover:ease-in transition duration-150 ease-out py-3 rounded-lg text-white text-xl mt-5 '>
+        <button className='bg-deepGreen border-none outline-none shadow-[13px_18px_13px_rgba(130,178,182,0.41)] px-[60px] hover:shadow-[3px_5px_10px_rgba(130,178,182,0.41)] hover:ease-in transition duration-150 ease-out py-3 rounded-lg text-white text-xl mt-5 '>
           Start Selling
         </button>
       </div>
@@ -37,7 +37,7 @@ const Hero = () => {
 
         {/* location button */}
         <div className='hidden md:block'>
-          <button className='flex items-center  rounded-md h-[45px] bg-[rgba(255,255,255,0.92)] px-6 py-2 '>
+          <button className='flex items-center border-none outline-none  rounded-md h-[45px] bg-[rgba(255,255,255,0.92)] px-6 py-2 '>
             <span className='mr-1 text-[12px] mb-1 '>
               <GoLocation color='grey' />
             </span>

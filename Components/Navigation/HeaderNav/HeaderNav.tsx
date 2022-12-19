@@ -22,7 +22,7 @@ const HeaderNav = () => {
       <nav className='md:hidden flex justify-between items-center py-4 px-4 pr-2 sm:px-10 '>
         <h2>Logo</h2>
         <div className='flex items-center space-x-3'>
-          <button className='text-[12px] font-monteserrat border-pink border-[1px] rounded-[25px] px-3 py-2 text-pink'>
+          <button className='text-[12px] font-monteserrat  outline-none border-pink border-[1px] rounded-[25px] px-3 py-2 text-pink'>
             Sell Now
           </button>
           <button>
@@ -39,7 +39,11 @@ const HeaderNav = () => {
                   ease: 'easeOut'
                 }}
               >
-                <CgClose onClick={close} fontSize={30} />
+                <CgClose
+                  onClick={close}
+                  className='border-none outline-none'
+                  fontSize={30}
+                />
               </motion.div>
             ) : (
               <motion.div
@@ -54,7 +58,11 @@ const HeaderNav = () => {
                   ease: 'easeOut'
                 }}
               >
-                <RiMenu3Fill onClick={open} fontSize={30} />
+                <RiMenu3Fill
+                  className='border-none outline-none'
+                  onClick={open}
+                  fontSize={30}
+                />
               </motion.div>
             )}
           </button>
@@ -102,7 +110,7 @@ const HeaderNav = () => {
             )
           })}
         </ul>
-        <button className='pink-btn ease-in-out duration-300 hover:scale-105'>
+        <button className='pink-btn border-none outline-none ease-in-out duration-300 hover:scale-105'>
           Sell Now
         </button>
       </nav>

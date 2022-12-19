@@ -27,8 +27,8 @@ const NotFound = () => {
             <Image src='/images/404.png' layout='fill' alt='404' />
           </motion.div>
           <p className='text-center text-[14px] mb-10 md:text-[16px]'>
-            Unfortunately, we cannot find that page! Everything is still
-            awesome, so don't worry
+            {`Unfortunately, we cannot find that page! Everything is still
+            awesome, so don't worry`}
           </p>
         </div>
       </Layout>

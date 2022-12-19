@@ -21,7 +21,7 @@ const Category = () => {
     <div className=' bg-white h-[100%] md:shadow-md '>
       {/* mobile category */}
       <div className=' md:hidden mb-4'>
-        <Grid container rowGap={0.7} columnGap={0.7}>
+        <Grid container rowGap={0.7} justifyContent='center' columnGap={0.7}>
           {categories.map((category, index) => {
             return (
               <Grid

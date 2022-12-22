@@ -57,3 +57,10 @@ export const ResourcesLinks: linksType[] = [
     href: ''
   }
 ]
+
+export const NavLinks: linksType[] = [
+  { title: 'Home', href: '/' },
+  { title: 'About us', href: '/pages/about' },
+  { title: 'Blog', href: '' },
+  { title: 'FAQ', href: '/pages/faq' }
+]

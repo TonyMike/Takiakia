@@ -4,7 +4,7 @@ import { NairaIcon } from '../../utils/staticData'
 
 const FilterProductCard = () => {
   return (
-    <div className='bg-white p-3 shadow-sm flex space-x-3 text-[14px] h-[130px]'>
+    <div className='bg-white p-3 shadow-sm flex space-x-3 text-[14px] h-[130px] overflow-clip'>
       <div className='min-w-[150px]  rounded-sm  relative'>
         <Image
           src='/images/iphone13.jpg'
@@ -19,7 +19,7 @@ const FilterProductCard = () => {
           <NairaIcon fontSize='16px' />
           <span>30,000</span>
         </p>
-        <p className='text-grey text-[11px] h-[33px] overflow-hidden '>
+        <p className='text-grey text-[11px] h-[33px] overflow-hidden truncate text-ellipsis whitespace-nowrap'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est
           adipiscing in phasellus non in justo.
         </p>

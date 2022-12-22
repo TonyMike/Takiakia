@@ -1,6 +1,12 @@
 import Image from 'next/image'
 import { GoLocation } from 'react-icons/go'
-const ProductCard = ({ productCondition }: { productCondition: string }) => {
+const ProductCard = ({
+  productCondition,
+  data
+}: {
+  productCondition: string
+  data: any
+}) => {
   return (
     <div className='shadow-md relative px-2 py-3 cursor-pointer'>
       <p
@@ -12,15 +18,15 @@ const ProductCard = ({ productCondition }: { productCondition: string }) => {
       </p>
       <div className='w-full h-[120px] sm:h-32 md:h-40 lg:h-[165px]'>
         <Image
-          src='/images/iphone13.jpg'
+          src={`${data.category.image}`}
           height={100}
           width={100}
           alt='product'
           className='h-full w-full'
         />
       </div>
-      <h6 className='text-[16px] my-1 md:my-2'>Iphone 13 pro max</h6>
-      <p className='font-Poppins text-navyBlue'>N 560,000</p>
+      <h6 className='text-[16px] my-1 md:my-2'>{data.title}</h6>
+      <p className='font-Poppins text-navyBlue'>N {data.price}</p>
       <p className='text-[rgba(0,0,0,0.7)] text-[12px] mt-1 md:text-[13px] flex items-center space-x-1   md:my-1'>
         <GoLocation fontSize={15} />
 

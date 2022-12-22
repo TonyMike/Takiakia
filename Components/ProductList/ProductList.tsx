@@ -1,7 +1,7 @@
 import { Grid } from '@mui/material'
 import ProductCard from '../Cards/ProductCard'
 
-const ProductList = () => {
+const ProductList = ({ products }: any) => {
   return (
     <div className=''>
       <h3 className='text-[25px] text-center  py-2 text-navyBlue'>
@@ -14,42 +14,16 @@ const ProductList = () => {
           rowGap={2}
           justifyContent='space-between'
         >
-          <Grid item xs={5.7} sm={5.7} md={3.9}>
-            <ProductCard productCondition={'new'} />
-          </Grid>
-          <Grid item xs={5.7} sm={5.7} md={3.9}>
-            <ProductCard productCondition={'used'} />
-          </Grid>
-          <Grid item xs={5.7} sm={5.7} md={3.9}>
-            <ProductCard productCondition={'new'} />
-          </Grid>
-          <Grid item xs={5.7} sm={5.7} md={3.9}>
-            <ProductCard productCondition={'new'} />
-          </Grid>
-          <Grid item xs={5.7} sm={5.7} md={3.9}>
-            <ProductCard productCondition={'used'} />
-          </Grid>
-          <Grid item xs={5.7} sm={5.7} md={3.9}>
-            <ProductCard productCondition={'new'} />
-          </Grid>
-          <Grid item xs={5.7} sm={5.7} md={3.9}>
-            <ProductCard productCondition={'new'} />
-          </Grid>
-          <Grid item xs={5.7} sm={5.7} md={3.9}>
-            <ProductCard productCondition={'used'} />
-          </Grid>
-          <Grid item xs={5.7} sm={5.7} md={3.9}>
-            <ProductCard productCondition={'new'} />
-          </Grid>
-          <Grid item xs={5.7} sm={5.7} md={3.9}>
-            <ProductCard productCondition={'new'} />
-          </Grid>
-          <Grid item xs={5.7} sm={5.7} md={3.9}>
-            <ProductCard productCondition={'used'} />
-          </Grid>
-          <Grid item xs={5.7} sm={5.7} md={3.9}>
-            <ProductCard productCondition={'new'} />
-          </Grid>
+          {products.slice(0, 21).map((product: any, index: number) => {
+            return (
+              <Grid key={index} item xs={5.7} sm={5.7} md={3.9}>
+                <ProductCard
+                  data={product}
+                  productCondition={product.id % 2 === 0 ? 'new' : 'odd'}
+                />
+              </Grid>
+            )
+          })}
         </Grid>
       </div>
     </div>

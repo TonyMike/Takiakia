@@ -6,9 +6,7 @@ import Hero from '../Components/Hero/Hero'
 import Layout from '../Components/Layout'
 import ProductList from '../Components/ProductList/ProductList'
 
-type Props = {}
-
-const Home: NextPage = (props: Props) => {
+const Home = ({ data }: { data: any }) => {
   return (
     <>
       <Head>
@@ -20,7 +18,7 @@ const Home: NextPage = (props: Props) => {
           <Category />
 
           <div className=' grow '>
-            <ProductList />
+            <ProductList products={data} />
           </div>
         </main>
         <BlogSection />
@@ -31,3 +29,15 @@ const Home: NextPage = (props: Props) => {
 }
 
 export default Home
+
+export async function getStaticProps () {
+  const callApi = await fetch('https://api.escuelajs.co/api/v1/products')
+    .then(response => response.json())
+    .then(data => data)
+  const data = await callApi
+  return {
+    props: {
+      data
+    }
+  }
+}

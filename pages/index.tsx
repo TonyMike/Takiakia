@@ -31,7 +31,8 @@ const Home = ({ data }: { data: any }) => {
 export default Home
 
 export async function getStaticProps () {
-  const callApi = await fetch('https://api.escuelajs.co/api/v1/products')
+  const url = process.env.API_URL
+  const callApi = await fetch(`${url}`)
     .then(response => response.json())
     .then(data => data)
   const data = await callApi

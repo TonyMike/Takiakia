@@ -13,7 +13,7 @@ module.exports = {
       red: '#ff0000',
       blue: '#2f1ac4',
       skyBlue: '#f2f5ff',
-      navyBlue: '#0D0E43',
+      navyBlue: '#111C85',
       offBlue: '#151875',
       offNavyBlue: '#3f509e',
       pantonePurple: '#fbfafe',
@@ -21,7 +21,9 @@ module.exports = {
       purple: '#7e33e0',
       offPurple: '#9563b5',
       deepGreen: '#428c91',
-      white: '#ffffff'
+      white: '#ffffff',
+      grey: '#9295AA',
+      darkGrey: '#000000b3'
     },
     extend: {
       fontFamily: {

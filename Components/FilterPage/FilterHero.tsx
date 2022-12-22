@@ -10,7 +10,9 @@ const HeroMobile = () => {
         layout='fill'
         className='z-[-1]'
       />
-      <SearchBox />
+      <div className='absolute bottom-[50px] w-full'>
+        <SearchBox />
+      </div>
     </div>
   )
 }

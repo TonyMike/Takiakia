@@ -1,4 +1,4 @@
-import { linksType } from '../@types/types'
+import { linksType, nairaProps } from '../@types/types'
 
 export const SupportLinks: linksType[] = [
   {
@@ -64,3 +64,7 @@ export const NavLinks: linksType[] = [
   { title: 'Blog', href: '' },
   { title: 'FAQ', href: '/pages/faq' }
 ]
+
+export const NairaIcon = ({ fontSize }: nairaProps) => {
+  return <span style={{ fontSize: fontSize, fontWeight: 500 }}>&#8358;</span>
+}

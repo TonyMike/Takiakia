@@ -1,5 +1,6 @@
 import { NextPage } from 'next'
 import Head from 'next/head'
+import FIlterBody from './FIlterBody'
 import FilterHero from './FilterHero'
 
 const FilterPage: NextPage = () => {
@@ -9,6 +10,7 @@ const FilterPage: NextPage = () => {
         <title>Takiakia | Marketplace for student</title>
       </Head>
       <FilterHero />
+      <FIlterBody />
     </div>
   )
 }

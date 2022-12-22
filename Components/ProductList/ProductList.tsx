@@ -19,7 +19,7 @@ const ProductList = ({ products }: any) => {
               <Grid key={index} item xs={5.7} sm={5.7} md={3.9}>
                 <ProductCard
                   data={product}
-                  productCondition={product.id % 2 === 0 ? 'new' : 'odd'}
+                  productCondition={product.id % 2 === 0 ? 'new' : 'old'}
                 />
               </Grid>
             )

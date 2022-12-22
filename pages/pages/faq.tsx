@@ -1,7 +1,8 @@
+import { NextPage } from 'next'
 import Head from 'next/head'
 import Layout from '../../Components/Layout'
 
-const FAQ = () => {
+const FAQ: NextPage = () => {
   return (
     <div>
       <Head>

@@ -19,7 +19,7 @@ const FilterProductCard = () => {
           <NairaIcon fontSize='16px' />
           <span>30,000</span>
         </p>
-        <p className='text-grey text-[11px] h-[33px] overflow-hidden truncate text-ellipsis whitespace-nowrap'>
+        <p className='text-grey text-[11px] h-[33px] overflow-hidden  '>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Magna in est
           adipiscing in phasellus non in justo.
         </p>

@@ -1,5 +1,6 @@
 import { NextPage } from 'next'
 import Head from 'next/head'
+import { Router, useRouter } from 'next/router'
 import BlogSection from '../Components/BlogSection/BlogSection'
 import Category from '../Components/Category/Category'
 import Hero from '../Components/Hero/Hero'
@@ -7,6 +8,10 @@ import Layout from '../Components/Layout'
 import ProductList from '../Components/ProductList/ProductList'
 
 const Home = ({ data }: { data: any }) => {
+  // const route = useRouter()
+  // if (route.isReady == false) {
+  //   return <h1>loading</h1>
+  // }
   return (
     <>
       <Head>

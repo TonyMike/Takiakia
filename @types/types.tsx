@@ -8,3 +8,10 @@ export type inputProps = {
 export type nairaProps = {
   fontSize: string
 }
+
+export type StateProps = string
+
+export type selectProps = {
+  title: string
+  arrayList?: StateProps[]
+}

@@ -1,4 +1,4 @@
-import { linksType, nairaProps } from '../@types/types'
+import { linksType, nairaProps, StateProps } from '../@types/types'
 
 export const SupportLinks: linksType[] = [
   {
@@ -68,3 +68,43 @@ export const NavLinks: linksType[] = [
 export const NairaIcon = ({ fontSize }: nairaProps) => {
   return <span style={{ fontSize: fontSize, fontWeight: 500 }}>&#8358;</span>
 }
+
+export const States: StateProps[] = [
+  'Abia',
+  'Adamawa',
+  'Akwa Ibom',
+  'Anambra',
+  'Bauchi',
+  'Bayelsa',
+  'Benue',
+  'Borno',
+  'Cross River',
+  'Delta',
+  'Ebonyi',
+  'Edo',
+  'Ekiti',
+  'Enugu',
+  'FCT - Abuja',
+  'Gombe',
+  'Imo',
+  'Jigawa',
+  'Kaduna',
+  'Kano',
+  'Katsina',
+  'Kebbi',
+  'Kogi',
+  'Kwara',
+  'Lagos',
+  'Nasarawa',
+  'Niger',
+  'Ogun',
+  'Ondo',
+  'Osun',
+  'Oyo',
+  'Plateau',
+  'Rivers',
+  'Sokoto',
+  'Taraba',
+  'Yobe',
+  'Zamfara'
+]

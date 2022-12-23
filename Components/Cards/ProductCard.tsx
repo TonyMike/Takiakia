@@ -1,5 +1,7 @@
 import Image from 'next/image'
 import { GoLocation } from 'react-icons/go'
+import Skeleton from 'react-loading-skeleton'
+
 const ProductCard = ({
   productCondition,
   data

@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 import { BsChevronDown } from 'react-icons/bs'
+import { RiArrowUpDownLine } from 'react-icons/ri'
 import { selectProps } from '../../@types/types'
 import { States } from '../../utils/staticData'
 import SelectOptions from './SelectOptions'
@@ -11,7 +12,7 @@ const FilterCategory = () => {
 
   const showOptions = () => {}
   return (
-    <div>
+    <div className='mb-2'>
       {/* <div className='relative top-[30px] w-40'>
         <SelectOptions />
       </div> */}
@@ -26,7 +27,15 @@ const FilterCategory = () => {
           <SelectOptions title='Price' />
           <SelectOptions title='Condition' />
         </div>
-        <div></div>
+        <div className='flex justify-end'>
+          <div className='flex space-x-2'>
+            <p className='text-grey text-sm'>Sort by:</p>
+            <button className='flex items-center text-sm space-x-1'>
+              <RiArrowUpDownLine className='text-deepGreen' />
+              <span className='#464b4f'>Newest</span>
+            </button>
+          </div>
+        </div>
       </div>
 
       {/* desktop filter */}

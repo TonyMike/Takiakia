@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from "next/legacy/image";
 import SearchBox from '../../Reusables/SearchBox'
 
 const HeroMobile = () => {

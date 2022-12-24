@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from "next/legacy/image";
 import { BsSearch, BsChevronDown } from 'react-icons/bs'
 import { GoLocation } from 'react-icons/go'
 import SearchBox from '../../Reusables/SearchBox'

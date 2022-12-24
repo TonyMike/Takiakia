@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from "next/legacy/image";
 import { BiCalendar } from 'react-icons/bi'
 
 const BlogPost = () => {

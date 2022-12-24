@@ -21,6 +21,14 @@ const HeroDesktop = () => {
   return (
     <div className='h-[210px] w-full relative'>
       <Image src='/images/filterHeroImageD.png' alt='hero img' layout='fill' />
+      <div className=' relative h-full flex items-center justify-center space-x-5'>
+        <h1 className='text-3xl'>Search Result</h1>
+        <input
+          type='text'
+          className='text-md outline-none w-2/5 border-pink border-[1px] p-3 rounded-md'
+          placeholder='hp laptop'
+        />
+      </div>
     </div>
   )
 }

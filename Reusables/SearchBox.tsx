@@ -1,7 +1,10 @@
 import { BsChevronDown, BsSearch } from 'react-icons/bs'
 import { GoLocation } from 'react-icons/go'
-
-const SearchBox = () => {
+interface Location {
+  noLocation?: boolean
+}
+const SearchBox = ({ noLocation }: Location) => {
+  console.log(noLocation)
   return (
     <div className=' w-[100%] px-10 flex items-center justify-center relative bottom-[-20px] m:bottom-0  space-x-6'>
       {/* search button */}
@@ -15,18 +18,20 @@ const SearchBox = () => {
       </div>
 
       {/* location button */}
-      <div className='hidden md:block'>
-        <button className='flex items-center border-none outline-none  rounded-md h-[45px] bg-[rgba(255,255,255,0.92)] px-6 py-2 '>
-          <span className='mr-1 text-[12px] mb-1 '>
-            <GoLocation color='grey' />
-          </span>
-          <span className='text-navyBlue'>Abuja</span>
+      {noLocation === false || noLocation === undefined ? (
+        <div className='hidden md:block'>
+          <button className='flex items-center border-none outline-none  rounded-md h-[45px] bg-[rgba(255,255,255,0.92)] px-6 py-2 '>
+            <span className='mr-1 text-[12px] mb-1 '>
+              <GoLocation color='grey' />
+            </span>
+            <span className='text-navyBlue'>Abuja</span>
 
-          <span>
-            <BsChevronDown className='text-pink ml-5 text-[12px] font-bold' />
-          </span>
-        </button>
-      </div>
+            <span>
+              <BsChevronDown className='text-pink ml-5 text-[12px] font-bold' />
+            </span>
+          </button>
+        </div>
+      ) : null}
     </div>
   )
 }

@@ -3,7 +3,7 @@ import SearchBox from '../../Reusables/SearchBox'
 
 const HeroMobile = () => {
   return (
-    <div className='h-[210px] sm:h-[270px] w-full relative'>
+    <div className='h-[170px] sm:h-[210px] w-full relative'>
       <Image
         src='/images/filterHeroImageM.png'
         alt='hero img'

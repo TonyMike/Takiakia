@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { BsSearch, BsChevronDown } from 'react-icons/bs'
 import { GoLocation } from 'react-icons/go'
 import SearchBox from '../../Reusables/SearchBox'
@@ -5,8 +6,14 @@ import SearchBox from '../../Reusables/SearchBox'
 const Hero = () => {
   return (
     <div
-      className={` md:bg-lightPurple h-[250px] sm:h-[320px] relative md:h-[470px] bg-cover md:bg-contain bg-no-repeat bg-right bg-[url('/images/heroImage2.png')] md:bg-[url('/images/heroImage.png')] px-10 md:px-20 py-10 md:py-[60px] mb-10 `}
+      className={` md:bg-lightPurple h-[250px] sm:h-[320px] relative md:h-[470px] bg-cover md:bg-contain bg-no-repeat bg-right  md:bg-[url('/images/heroImage.png')] px-10 md:px-20 py-10 md:py-[60px] mb-10 `}
     >
+      <Image
+        src='/images/heroImage2.png'
+        alt='hero background image'
+        layout='fill'
+        className='md:hidden'
+      />
       {/* hero message */}
       <div className='hidden md:block'>
         <h3 className='text-2xl text-pink'>Best place to sell it!</h3>

@@ -14,7 +14,7 @@ const FilterProductCard = () => {
         />
       </div>
       <div className='h-full flex flex-col'>
-        <p className='text-navyBlue sm:text-lg font-thin lg:text-2xl'>
+        <p className='text-navyBlue text-[16px] ms:text-[17px] sm:text-lg font-thin lg:text-2xl'>
           Iphone 13 Pro max
         </p>
         <p className='flex text-[14px] sm:text-lg items-center space-x-[2px]  lg:my-2 lg:text-[20px] text-pink'>

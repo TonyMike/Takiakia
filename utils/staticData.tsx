@@ -66,7 +66,14 @@ export const NavLinks: linksType[] = [
 ]
 
 export const NairaIcon = ({ fontSize }: nairaProps) => {
-  return <span style={{ fontSize: fontSize, fontWeight: 500 }}>&#8358;</span>
+  return (
+    <span
+      style={{ fontWeight: 500 }}
+      className={`text-[${fontSize}] lg:text-[${fontSize + 7}]`}
+    >
+      &#8358;
+    </span>
+  )
 }
 
 export const States: StateProps[] = [

@@ -45,7 +45,7 @@ const FilterCategory = () => {
                     return (
                       <li
                         key={li}
-                        className='text-[13px] text-[#464b4f] pl-2  py-2 w-32 hover:bg-deepGreen hover:text-white right-[40px]'
+                        className='text-[13px]  cursor-pointer text-[#464b4f] pl-2  py-2 w-32 hover:bg-deepGreen hover:text-white right-[40px]'
                       >
                         Lowest price first
                       </li>
@@ -58,10 +58,48 @@ const FilterCategory = () => {
       </div>
 
       {/* desktop filter */}
-      <div className='hidden md:block'>
+      <div className='hidden md:block md:w-[250px] p-3 px-4 '>
         <div>
-          <h2>Filter</h2>
-          <div></div>
+          <h2 className='text-[20px] mb-2 tracking-wider text-navyBlue font-extrabold'>
+            Filter
+          </h2>
+          <div className='flex flex-col space-y-4'>
+            <SelectOptions title='All State' arrayList={States} />
+            <SelectOptions title='School' />
+            <SelectOptions title='Category' />
+            <SelectOptions title='Subcategory' />
+            <SelectOptions title='Price' />
+            <SelectOptions title='Condition' />
+            <div className='flex  mt-1 pr-[2px]'>
+              <div className='flex space-x-2 items-center relative'>
+                <p className='text-grey text-md'>Sort by:</p>
+                <button
+                  className='flex items-center text-md space-x-1'
+                  onClick={showOptions}
+                >
+                  <RiArrowUpDownLine className='text-deepGreen ' />
+                  <span className='text-[#464b4f]'>Newest</span>
+                </button>
+                {show ? (
+                  <ul className='absolute top-5 bg-white right-0 shadow-md '>
+                    {Array(3)
+                      .fill('')
+                      .map(li => {
+                        return (
+                          <li
+                            key={li}
+                            className='text-[14px] cursor-pointer text-[#464b4f] pl-2  py-2 w-32 hover:bg-deepGreen hover:text-white right-[40px]'
+                          >
+                            Lowest price first
+                          </li>
+                        )
+                      })}
+                  </ul>
+                ) : null}
+              </div>
+            </div>
+            <button className='pink-btn'>Apply</button>
+          </div>
         </div>
       </div>
     </div>

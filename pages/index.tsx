@@ -12,6 +12,8 @@ const Home = ({ data }: { data: any }) => {
   // if (route.isReady == false) {
   //   return <h1>loading</h1>
   // }
+  // console.log(data)
+
   return (
     <>
       <Head>
@@ -40,6 +42,9 @@ export async function getStaticProps () {
   const callApi = await fetch(`${url}`)
     .then(response => response.json())
     .then(data => data)
+    .catch(err => {
+      return JSON.stringify(err)
+    })
   const data = await callApi
   return {
     props: {

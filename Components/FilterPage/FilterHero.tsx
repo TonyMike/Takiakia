@@ -20,7 +20,12 @@ const HeroMobile = () => {
 const HeroDesktop = () => {
   return (
     <div className='h-[210px] w-full relative'>
-      <Image src='/images/filterHeroImageD.png' alt='hero img' layout='fill' />
+      <Image
+        src='/images/filterHeroImageD.png'
+        alt='hero img'
+        layout='fill'
+        className='w-full'
+      />
       <div className=' relative h-full flex items-center justify-center space-x-5'>
         <h1 className='text-3xl'>Search Result</h1>
         <input

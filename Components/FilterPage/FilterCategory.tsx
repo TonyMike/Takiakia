@@ -29,9 +29,9 @@ const FilterCategory = () => {
         </div>
         <div className='flex justify-end mt-1 pr-[2px]'>
           <div className='flex space-x-2 relative'>
-            <p className='text-grey text-sm'>Sort by:</p>
+            <p className='text-grey text-sm ms:text-[15px]'>Sort by:</p>
             <button
-              className='flex items-center text-sm space-x-1'
+              className='flex items-center text-sm ms:text-[15px] space-x-1'
               onClick={showOptions}
             >
               <RiArrowUpDownLine className='text-deepGreen ' />

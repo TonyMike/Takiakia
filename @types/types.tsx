@@ -15,3 +15,6 @@ export type selectProps = {
   title: string
   arrayList?: StateProps[]
 }
+export type Location = {
+  noLocation?: boolean
+}

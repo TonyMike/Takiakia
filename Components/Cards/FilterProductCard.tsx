@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image'
 import { GoLocation } from 'react-icons/go'
 import { NairaIcon } from '../../utils/staticData'
 
@@ -11,7 +11,8 @@ const FilterProductCard = () => {
           alt='product image'
           className='text-xs rounded-sm '
           fill
-          sizes="100vw" />
+          sizes='100vw'
+        />
       </div>
       <div className='h-full flex flex-col'>
         <p className='text-navyBlue text-[16px] ms:text-[17px] sm:text-lg font-thin lg:text-2xl'>
@@ -31,7 +32,7 @@ const FilterProductCard = () => {
         </p>
       </div>
     </div>
-  );
+  )
 }
 
 export default FilterProductCard

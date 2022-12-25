@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image'
 import { GoLocation } from 'react-icons/go'
 import Skeleton from 'react-loading-skeleton'
 
@@ -18,17 +18,13 @@ const ProductCard = ({
       >
         {productCondition}
       </p>
-      <div className='w-full h-[120px] sm:h-32 md:h-40 lg:h-[165px]'>
+      <div className='w-full h-[120px] sm:h-32 md:h-40 bg-red relative lg:h-[165px]'>
         <Image
           src={`${data.category.image}`}
-          height={100}
-          width={100}
+          objectFit='cover'
+          fill
           alt='product'
-          className='h-full w-full'
-          style={{
-            maxWidth: "100%",
-            height: "auto"
-          }} />
+        />
       </div>
       <h6 className='text-[16px] my-1 md:my-2'>{data.title}</h6>
       <p className='font-Poppins text-navyBlue'>N {data.price}</p>
@@ -38,7 +34,7 @@ const ProductCard = ({
         <span>FPE, Osun</span>
       </p>
     </div>
-  );
+  )
 }
 
 export default ProductCard

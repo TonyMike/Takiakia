@@ -1,5 +1,5 @@
 import { Grid } from '@mui/material'
-import Image from "next/image";
+import Image from 'next/image'
 import { TfiMenuAlt } from 'react-icons/tfi'
 
 const Category = () => {
@@ -36,24 +36,21 @@ const Category = () => {
                 className='bg-[#F7FAFE] py-3 px-2'
               >
                 <div className='flex flex-col items-center space-y-2 '>
-                  <Image
-                    src={category.icon}
-                    width={40}
-                    height={20}
-                    // layout='fill'
-                    className='mb-2'
-                    alt='icon'
-                    style={{
-                      maxWidth: "100%",
-                      height: "auto"
-                    }} />
+                  <div className='w-[35px] h-[35px] relative'>
+                    <Image
+                      src={category.icon}
+                      layout='fill'
+                      // className='mb-2 '
+                      alt='icon'
+                    />
+                  </div>
 
                   <p className='text-[12px] sm:text-[13px]  text-navyBlue font-semibold text-center capitalize'>
                     {category.name}
                   </p>
                 </div>
               </Grid>
-            );
+            )
           })}
         </Grid>
       </div>
@@ -81,17 +78,18 @@ const Category = () => {
                   height={20}
                   alt='icon'
                   style={{
-                    maxWidth: "100%",
-                    height: "auto"
-                  }} />
+                    maxWidth: '100%',
+                    height: 'auto'
+                  }}
+                />
                 <span className='text-[13px]'>{category.name}</span>
               </li>
-            );
+            )
           })}
         </ul>
       </div>
     </div>
-  );
+  )
 }
 
 export default Category

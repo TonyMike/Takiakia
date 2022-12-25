@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { BsSearch, BsChevronDown } from 'react-icons/bs'
 import { GoLocation } from 'react-icons/go'
 import SearchBox from '../../Reusables/SearchBox'
@@ -21,9 +22,11 @@ const Hero = () => {
         <h2 className='text-4xl w-[500px] mt-3 font-Poppins text-[#0D0E43]'>
           Buying and selling as a student has never been easier
         </h2>
-        <button className='bg-deepGreen border-none outline-none shadow-[13px_18px_13px_rgba(130,178,182,0.41)] px-[60px] hover:shadow-[3px_5px_10px_rgba(130,178,182,0.41)] hover:ease-in transition duration-150 ease-out py-3 rounded-lg text-white text-xl mt-5 '>
-          Start Selling
-        </button>
+        <Link href={'/postAd'} passHref>
+          <button className='bg-deepGreen border-none outline-none shadow-[13px_18px_13px_rgba(130,178,182,0.41)] px-[60px] hover:shadow-[3px_5px_10px_rgba(130,178,182,0.41)] hover:ease-in transition duration-150 ease-out py-3 rounded-lg text-white text-xl mt-5 '>
+            Start Selling
+          </button>
+        </Link>
       </div>
 
       <div className='md:hidden z-30'>

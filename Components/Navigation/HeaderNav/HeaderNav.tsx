@@ -23,9 +23,11 @@ const HeaderNav = () => {
       <nav className='md:hidden flex justify-between items-center py-4 px-4 pr-2 sm:px-10 '>
         <h2>Logo</h2>
         <div className='flex items-center space-x-3'>
-          <button className='text-[12px] outline-none border-pink border-[1px] rounded-[25px] px-3 py-2 text-pink'>
-            Sell Now
-          </button>
+          <Link href={'/postAd'} passHref>
+            <button className='text-[12px] outline-none border-pink border-[1px] rounded-[25px] px-3 py-2 text-pink'>
+              Sell Now
+            </button>
+          </Link>
           <button>
             {show ? (
               <motion.div
@@ -110,9 +112,11 @@ const HeaderNav = () => {
             )
           })}
         </ul>
-        <button className='pink-btn border-none outline-none ease-in-out shadow-md duration-300 hover:scale-105'>
-          Sell Now
-        </button>
+        <Link href={'/postAd'} passHref>
+          <button className='pink-btn border-none outline-none ease-in-out shadow-md duration-300 hover:scale-105'>
+            Sell Now
+          </button>
+        </Link>
       </nav>
     </header>
   )

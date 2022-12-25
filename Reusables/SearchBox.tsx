@@ -50,20 +50,18 @@ const SearchBox = ({ noLocation }: Location) => {
       </form>
 
       {/* location button */}
-      {noLocation === false || noLocation === undefined ? (
-        <div className='hidden md:block'>
-          <button className='flex items-center border-none outline-none  rounded-md h-[45px] bg-[rgba(255,255,255,0.92)] px-6 py-2 '>
-            <span className='mr-1 text-[12px] mb-1 '>
-              <GoLocation color='grey' />
-            </span>
-            <span className='text-navyBlue'>Abuja</span>
+      <div className='hidden md:block'>
+        <button className='flex items-center border-none outline-none  rounded-md h-[45px] bg-[rgba(255,255,255,0.92)] px-6 py-2 '>
+          <span className='mr-1 text-[12px] mb-1 '>
+            <GoLocation color='grey' />
+          </span>
+          <span className='text-navyBlue'>Abuja</span>
 
-            <span>
-              <BsChevronDown className='text-pink ml-5 text-[12px] font-bold' />
-            </span>
-          </button>
-        </div>
-      ) : null}
+          <span>
+            <BsChevronDown className='text-pink ml-5 text-[12px] font-bold' />
+          </span>
+        </button>
+      </div>
     </div>
   )
 }

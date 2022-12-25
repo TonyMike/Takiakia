@@ -15,6 +15,9 @@ const ProductList = ({ products }: any) => {
           justifyContent='space-between'
         >
           {/* {products?.slice(0, 18).map((product: any, index: number) => {
+=======
+          {products.slice(0, 18).map((product: any, index: number) => {
+>>>>>>> parent of 681837c (filter hero desktop)
             return (
               <Grid key={index} item xs={5.7} sm={5.7} md={3.9}>
                 <ProductCard

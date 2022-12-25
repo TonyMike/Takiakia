@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image'
 import SearchBox from '../../Reusables/SearchBox'
 
 const HeroMobile = () => {
@@ -9,23 +9,20 @@ const HeroMobile = () => {
         alt='hero img'
         className='z-[-1]'
         fill
-        sizes="100vw" />
+        sizes='100vw'
+      />
       <div className='absolute bottom-[50px] w-full'>
         <SearchBox />
       </div>
     </div>
-  );
+  )
 }
 
 const HeroDesktop = () => {
   return (
     <div className='h-[210px] w-full relative'>
-      <Image
-        src='/images/filterHeroImageD.png'
-        alt='hero img'
-        className='w-full'
-        fill
-        sizes="100vw" />
+      <Image src='/images/filterHeroImageD.png' alt='hero img' layout='fill' />
+
       <div className=' relative h-full flex items-center justify-center space-x-5'>
         <h1 className='text-3xl'>Search Result</h1>
         <input
@@ -35,8 +32,9 @@ const HeroDesktop = () => {
         />
       </div>
     </div>
-  );
+  )
 }
+
 const FilterHero = () => {
   return (
     <div>

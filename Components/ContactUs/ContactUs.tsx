@@ -1,5 +1,5 @@
 import { Grid } from '@mui/material'
-import Image from "next/legacy/image";
+import Image from "next/image";
 import InputText from '../../Reusables/InputText'
 import TextArea from '../../Reusables/TextArea'
 
@@ -32,11 +32,11 @@ const ContactUs = () => {
           </form>
         </Grid>
         <Grid item xs={12} md={5.5} className='hidden md:block relative'>
-          <Image src='/images/contactUs.png' alt='contact us' layout='fill' />
+          <Image src='/images/contactUs.png' alt='contact us' fill sizes="100vw" />
         </Grid>
       </Grid>
     </div>
-  )
+  );
 }
 
 export default ContactUs

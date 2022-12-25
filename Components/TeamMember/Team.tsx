@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 const TeamMember = () => {
   return (
@@ -101,11 +101,11 @@ const TeamMember = () => {
           <div className='absolute mb-4 text-center transform translate-x-1/2 -top-16 right-1/2'>
             <span className='relative block'>
               <Image
-                layout='fill'
                 alt='profil'
                 src='/images/tony.jpg'
                 className='mx-auto object-cover rounded-lg h-40 w-40  border-2 border-white dark:border-gray-800'
-              />
+                fill
+                sizes="100vw" />
             </span>
           </div>
           <div className='px-8 py-4 pt-24 bg-white rounded-lg shadow dark:bg-gray-800'>
@@ -272,7 +272,7 @@ const TeamMember = () => {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default TeamMember

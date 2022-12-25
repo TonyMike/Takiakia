@@ -11,8 +11,8 @@ const Hero = () => {
       <Image
         src='/images/heroImage2.png'
         alt='hero background image'
-        fill={true}
-        className='md:hidden z-0 cursor-pointer bg-red'
+        layout='fill'
+        className='md:hidden z-0 cursor-pointerd'
       />
       {/* hero message */}
       <div className='hidden md:block'>

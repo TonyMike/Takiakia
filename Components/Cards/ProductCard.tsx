@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { GoLocation } from 'react-icons/go'
 import Skeleton from 'react-loading-skeleton'
 
@@ -25,7 +25,10 @@ const ProductCard = ({
           width={100}
           alt='product'
           className='h-full w-full'
-        />
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
       </div>
       <h6 className='text-[16px] my-1 md:my-2'>{data.title}</h6>
       <p className='font-Poppins text-navyBlue'>N {data.price}</p>
@@ -35,7 +38,7 @@ const ProductCard = ({
         <span>FPE, Osun</span>
       </p>
     </div>
-  )
+  );
 }
 
 export default ProductCard

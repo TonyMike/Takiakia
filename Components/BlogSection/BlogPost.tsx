@@ -1,4 +1,4 @@
-import Image from 'next/legacy/image'
+import Image from "next/image";
 import { BiCalendar } from 'react-icons/bi'
 
 const BlogPost = () => {
@@ -11,7 +11,10 @@ const BlogPost = () => {
           width={100}
           src='/images/postImg.jpg'
           className='object-cover w-full max-h-44 md:max-h-40'
-        />
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
         <div className='w-full p-4'>
           <p className='font-Poppins text-[14px] mb-2 md:mb-5 flex items-center space-x-2'>
             <span>
@@ -34,7 +37,7 @@ const BlogPost = () => {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default BlogPost

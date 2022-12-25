@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Layout from '../Components/Layout'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
@@ -25,7 +25,7 @@ const NotFound = () => {
             }}
             className='h-80 w-80 relative'
           >
-            <Image src='/images/404.png' layout='fill' alt='404' />
+            <Image src='/images/404.png' alt='404' fill sizes="100vw" />
           </motion.div>
           <p className='text-center text-[14px] md:text-[16px]'>
             Hey there! You seem lost. I could help you back home
@@ -38,7 +38,7 @@ const NotFound = () => {
         </div>
       </Layout>
     </div>
-  )
+  );
 }
 
 export default NotFound

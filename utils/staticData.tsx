@@ -69,7 +69,7 @@ export const NairaIcon = ({ fontSize }: nairaProps) => {
   return (
     <span
       style={{ fontWeight: 500 }}
-      className={`text-[${fontSize}] lg:text-[${fontSize + 7}]`}
+      className={`text-[${fontSize}px] lg:text-[${fontSize + 7}]`}
     >
       &#8358;
     </span>

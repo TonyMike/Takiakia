@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image'
 import { BsSearch, BsChevronDown } from 'react-icons/bs'
 import { GoLocation } from 'react-icons/go'
 import SearchBox from '../../Reusables/SearchBox'
@@ -11,8 +11,8 @@ const Hero = () => {
       <Image
         src='/images/heroImage2.png'
         alt='hero background image'
-        layout='fill'
-        className='md:hidden'
+        fill={true}
+        className='md:hidden z-0 cursor-pointer bg-red'
       />
       {/* hero message */}
       <div className='hidden md:block'>
@@ -25,7 +25,7 @@ const Hero = () => {
         </button>
       </div>
 
-      <div className='md:hidden'>
+      <div className='md:hidden z-30'>
         <h2 className='text-xl  mt-3 font-Poppins text-center text-[deepGreen]'>
           Student shopping made easy
         </h2>

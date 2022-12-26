@@ -85,16 +85,7 @@ const Category = () => {
       </div>
 
       {/* desktop categories */}
-      <Box
-        sx={{
-          backgroundColor: 'red'
-          // position: scrollPosition > 200 ? 'fixed' : 'relative',
-          // top: scrollPosition > 200 ? '1' : '',
-          // zIndex: 20
-          // backgroundColor: scrollPosition >= 535 ? 'red' : 'white'
-        }}
-        className='hidden md:block'
-      >
+      <Box className='hidden md:block'>
         {/* <h3 className='flex pr-20  py-5 md:pl-5 lg:pl-6 items-center space-x-2'>
           <span className='mb-1'>
             <TfiMenuAlt />

@@ -1,10 +1,33 @@
-import { Grid } from '@mui/material'
+import { Box, Grid } from '@mui/material'
 import Image from 'next/image'
-import { useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { TfiMenuAlt } from 'react-icons/tfi'
+import UseScrollPosition from '../../Hooks/UseScrollPosition'
 
 const Category = () => {
+  const { scrollPosition } = UseScrollPosition()
+  // const [scrollPosition, setScrollPosition] = useState(0)
+
+  // useEffect(() => {
+  //   function handleScroll () {
+  //     setScrollPosition(window.pageYOffset)
+  //   }
+
+  //   window.addEventListener('scroll', handleScroll)
+
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll)
+  //   }
+  // }, [])
+
+  // const divStyle = {
+  //   position: scrollPosition > 200 ? 'fixed' : 'relative',
+  //   top: scrollPosition > 200 ? '0' : ''
+  // }
+
   const divRef = useRef(null)
+  const div = divRef.current
+
   const categories = [
     { name: 'Phones & Tablets', icon: '/icons/smartphone.png' },
     { name: 'Electronics', icon: '/icons/electronics.png' },
@@ -19,10 +42,12 @@ const Category = () => {
     { name: 'Property', icon: '/icons/house.png' },
     { name: 'Musical Instrument', icon: '/icons/musical-instrument.png' }
   ]
-  // console.log(divRef?.current?.baseUrl)
-  console.log(divRef)
+
   return (
-    <div className=' bg-white h-[100%] md:shadow-md '>
+    <div className=' md:shadow-md '>
+      <div className='fixed left-4 text4xl z-40 top-0'>
+        The scroll position is {scrollPosition}
+      </div>
       {/* mobile category */}
       <div className=' md:hidden mb-4'>
         <Grid container rowGap={0.7} justifyContent='center' columnGap={0.7}>
@@ -60,7 +85,16 @@ const Category = () => {
       </div>
 
       {/* desktop categories */}
-      <div className='hidden relative md:block'>
+      <Box
+        sx={{
+          backgroundColor: 'red'
+          // position: scrollPosition > 200 ? 'fixed' : 'relative',
+          // top: scrollPosition > 200 ? '1' : '',
+          // zIndex: 20
+          // backgroundColor: scrollPosition >= 535 ? 'red' : 'white'
+        }}
+        className='hidden md:block'
+      >
         {/* <h3 className='flex pr-20  py-5 md:pl-5 lg:pl-6 items-center space-x-2'>
           <span className='mb-1'>
             <TfiMenuAlt />
@@ -78,7 +112,7 @@ const Category = () => {
         </ul> */}
 
         {/* category list */}
-        <ul className='relative' ref={divRef}>
+        <ul className='' ref={divRef}>
           {categories.map((category, index) => {
             return (
               <li
@@ -100,7 +134,7 @@ const Category = () => {
             )
           })}
         </ul>
-      </div>
+      </Box>
     </div>
   )
 }

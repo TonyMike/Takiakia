@@ -1,8 +1,10 @@
 import { Grid } from '@mui/material'
 import Image from 'next/image'
+import { useRef } from 'react'
 import { TfiMenuAlt } from 'react-icons/tfi'
 
 const Category = () => {
+  const divRef = useRef(null)
   const categories = [
     { name: 'Phones & Tablets', icon: '/icons/smartphone.png' },
     { name: 'Electronics', icon: '/icons/electronics.png' },
@@ -17,6 +19,8 @@ const Category = () => {
     { name: 'Property', icon: '/icons/house.png' },
     { name: 'Musical Instrument', icon: '/icons/musical-instrument.png' }
   ]
+  // console.log(divRef?.current?.baseUrl)
+  console.log(divRef)
   return (
     <div className=' bg-white h-[100%] md:shadow-md '>
       {/* mobile category */}
@@ -56,21 +60,30 @@ const Category = () => {
       </div>
 
       {/* desktop categories */}
-      <div className='hidden md:block'>
-        <h3 className='flex pr-20  py-5 md:pl-5 lg:pl-6 items-center space-x-2'>
+      <div className='hidden relative md:block'>
+        {/* <h3 className='flex pr-20  py-5 md:pl-5 lg:pl-6 items-center space-x-2'>
           <span className='mb-1'>
             <TfiMenuAlt />
           </span>
           <span className='text-[20px] '>Categories</span>
-        </h3>
+        </h3> */}
+        {/* <ul className='absolute w-[400px] z-20 bg-red shadow-sm top-0 left-[235px] h-full'>
+          <li>cars</li>
+          <li>cars</li>
+          <li>cars</li>
+          <li>cars</li>
+          <li>cars</li>
+          <li>cars</li>
+          <li>cars</li>
+        </ul> */}
 
         {/* category list */}
-        <ul>
+        <ul className='relative' ref={divRef}>
           {categories.map((category, index) => {
             return (
               <li
                 key={index}
-                className='capitalize  p-20 pr-1 py-2 md:pl-5 lg:pl-6 text-[15px] flex space-x-2 text-[#3d3d3d] hover:bg-pink hover:text-white transition-all ease-in-out duration-200 cursor-pointer hover:ease-in '
+                className='capitalize w-[200px] md:w-[234px] py-2 md:pl-5 lg:pl-6 text-[15px] flex space-x-2 text-[#3d3d3d] hover:bg-pink hover:text-white transition-all ease-in-out duration-200 cursor-pointer hover:ease-in '
               >
                 <Image
                   src={category.icon}

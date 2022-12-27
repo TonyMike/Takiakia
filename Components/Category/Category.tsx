@@ -45,9 +45,9 @@ const Category = () => {
 
   return (
     <div className=' md:shadow-md '>
-      <div className='fixed left-4 text4xl z-40 top-0'>
+      {/* <div className='fixed left-4 text4xl z-40 top-0'>
         The scroll position is {scrollPosition}
-      </div>
+      </div> */}
       {/* mobile category */}
       <div className=' md:hidden mb-4'>
         <Grid container rowGap={0.7} justifyContent='center' columnGap={0.7}>

@@ -19,7 +19,7 @@ const ProductCard = ({
       >
         {productCondition}
       </p>
-      <div className='w-full h-[120px] sm:h-32 md:h-40 bg-red relative lg:h-[165px]'>
+      <div className='w-full h-[120px] sm:h-32 md:h-40  relative lg:h-[165px]'>
         <Image
           src={`${data.category.image}`}
           objectFit='cover'

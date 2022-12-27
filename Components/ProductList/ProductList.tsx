@@ -14,7 +14,7 @@ const ProductList = ({ products }: any) => {
           rowGap={2}
           justifyContent='space-between'
         >
-          {products.slice(0, 18).map((product: any, index: number) => {
+          {products.slice(0, 12).map((product: any, index: number) => {
             return (
               <Grid key={index} item xs={5.7} sm={5.7} md={3.9}>
                 <ProductCard

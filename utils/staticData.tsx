@@ -65,13 +65,13 @@ export const NavLinks: linksType[] = [
   { title: 'FAQ', href: '/pages/faq' }
 ]
 
-export const NairaIcon = ({ fontSize }: nairaProps) => {
+export const NairaIcon = () => {
   return (
     <span
-      style={{ fontWeight: 500 }}
-      className={`text-[${fontSize}px] lg:text-[${fontSize + 7}]`}
+    // style={{ fontWeight: 500 }}
+    // className={`text-[${fontSize}px] lg:text-[${fontSize + 7}]`}
     >
-      &#8358;
+      {/* &#8358; */}₦
     </span>
   )
 }

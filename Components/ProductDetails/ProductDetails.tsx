@@ -4,12 +4,12 @@ import ImageDisplay from './ImageDisplay'
 
 const ProductDetails = () => {
   return (
-    <div className='p-10'>
+    <div className='m:p-10'>
       <Grid container>
-        <Grid item md={8}>
+        <Grid item xs={12} md={8} bgcolor='red' className=''>
           <ImageDisplay />
         </Grid>
-        <Grid item md={4}>
+        <Grid item xs={12} md={4}>
           <DetailsOne />
         </Grid>
       </Grid>

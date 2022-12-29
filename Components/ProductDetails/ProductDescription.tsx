@@ -1,4 +1,7 @@
 import { Grid } from '@mui/material'
+import Link from 'next/link'
+import { AiFillInstagram } from 'react-icons/ai'
+import { RiFacebookCircleFill, RiWhatsappFill } from 'react-icons/ri'
 
 const ProductDescription = () => {
   return (
@@ -26,6 +29,34 @@ const ProductDescription = () => {
               )
             })}
         </Grid>
+      </div>
+      <div className='mb-3'>
+        <p className='uppercase text-grey text-[15px] mb-1'>
+          Share this product
+        </p>
+        <div className='flex items-center space-x-3'>
+          <Link
+            href='https://wa.me/+2349019404392'
+            target='_blank'
+            className='text-2xl'
+          >
+            <RiWhatsappFill className='text-[#24d366]' />
+          </Link>
+          <Link
+            href='https://wa.me/+2349019404392'
+            target='_blank'
+            className='text-2xl'
+          >
+            <RiFacebookCircleFill className='text-[#3b5998]' />
+          </Link>
+          <Link
+            href='https://wa.me/+2349019404392'
+            target='_blank'
+            className='text-2xl'
+          >
+            <AiFillInstagram className='text-[#e94475]' />
+          </Link>
+        </div>
       </div>
     </div>
   )

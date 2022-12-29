@@ -30,7 +30,7 @@ const ProductCard = ({
       </div>
       <h6 className='text-sm sm:text-[16px] my-1 md:my-2'>{data.title}</h6>
       <p className='font-Poppins flex text-[15px] sm:text-[16px] items-center space-x-1 text-navyBlue'>
-        <NairaIcon fontSize='16' />
+        <NairaIcon />
         <span> {data.price}</span>
       </p>
       <p className='text-[rgba(0,0,0,0.7)] text-[12px] mt-1 md:text-[13px] flex items-center space-x-1   md:my-1'>

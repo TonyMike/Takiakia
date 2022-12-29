@@ -19,7 +19,7 @@ const FilterProductCard = () => {
           Iphone 13 Pro max
         </p>
         <p className='flex text-[14px] sm:text-lg items-center space-x-[2px]  lg:my-2 lg:text-[20px] text-pink'>
-          <NairaIcon fontSize='16' />
+          <NairaIcon />
           <span>30,000</span>
         </p>
         <p className='text-grey text-[11px] h-[33px] sm:h-auto sm:text-[14px] sm:my-2 md:my-3 lg:text-[16px] overflow-hidden  '>

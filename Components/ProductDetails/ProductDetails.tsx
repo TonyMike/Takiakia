@@ -18,7 +18,12 @@ const ProductDetails = () => {
         </Grid>
       </Grid>
       <h1 className='hidden md:block'>Iphone 13 Pro Max</h1>
-      <Divider className='bg-pink my-3' />
+      <Divider
+        className='bg-pink'
+        sx={{
+          my: 3
+        }}
+      />
       <ProductDescription />
     </div>
   )

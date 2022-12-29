@@ -14,7 +14,6 @@ const DetailsOne = () => {
   const handleShowContact = () => {
     setShowContact(prev => (prev = true))
   }
-  console.log(showContact)
   return (
     <div className='px-3'>
       {/* product price */}
@@ -39,7 +38,7 @@ const DetailsOne = () => {
             </p>
             <p className='flex items-center space-x-1'>
               <TiLocationOutline className='text-pink' fontSize={18} />
-              <span>Oyo Ibadan</span>
+              <span>UI, Ibadan</span>
             </p>
           </div>
         </div>

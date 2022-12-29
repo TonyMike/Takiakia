@@ -6,7 +6,7 @@ import ProductDescription from './ProductDescription'
 const ProductTitle = ({ title }: { title: string }) => {
   return (
     <div>
-      <h1 className='text-2xl capitalize '>{title}</h1>
+      <h1 className='text-[22px] capitalize '>{title}</h1>
       {/* <h1 className='text-2xl capitalize '>{title}</h1> */}
     </div>
   )
@@ -15,7 +15,7 @@ const ProductDetails = () => {
   return (
     <div className='md:p-10'>
       <Grid container>
-        <Grid item xs={12} md={8} bgcolor='red' className=''>
+        <Grid item xs={12} md={8}>
           <ImageDisplay />
         </Grid>
         <Grid item xs={12} md={0} className='md:hidden px-3'>

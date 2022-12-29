@@ -1,4 +1,6 @@
 import { Divider, Grid } from '@mui/material'
+import { useContext } from 'react'
+import { DetailsContext } from '../../pages/[id]'
 import DetailsOne from './DetailsOne'
 import ImageDisplay from './ImageDisplay'
 import ProductDescription from './ProductDescription'
@@ -12,6 +14,7 @@ const ProductTitle = ({ title }: { title: string }) => {
   )
 }
 const ProductDetails = () => {
+  const data: any = useContext(DetailsContext)
   return (
     <div className='md:p-10'>
       <Grid container>
@@ -19,14 +22,14 @@ const ProductDetails = () => {
           <ImageDisplay />
         </Grid>
         <Grid item xs={12} md={0} className='md:hidden px-3'>
-          <ProductTitle title='Iphone 13 Pro Max' />
+          <ProductTitle title={`${data?.title}`} />
         </Grid>
         <Grid item xs={12} md={4}>
           <DetailsOne />
         </Grid>
       </Grid>
       <div className='px-3 hidden md:block'>
-        <ProductTitle title='Iphone 13 Pro Max' />
+        <ProductTitle title={`${data.title}`} />
       </div>
 
       <Divider

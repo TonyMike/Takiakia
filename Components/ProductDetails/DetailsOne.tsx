@@ -7,9 +7,12 @@ import {
 } from 'react-icons/ai'
 import { NairaIcon } from '../../utils/staticData'
 import { TiLocationOutline } from 'react-icons/ti'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
+import { DetailsContext } from '../../pages/[id]'
 
 const DetailsOne = () => {
+  const data: any = useContext(DetailsContext)
+
   const [showContact, setShowContact] = useState(false)
   const handleShowContact = () => {
     setShowContact(prev => (prev = true))
@@ -19,7 +22,7 @@ const DetailsOne = () => {
       {/* product price */}
       <h2 className='text-xl my-2 text-offBlue'>
         <NairaIcon />
-        {' 280,000'}
+        {`${data.price}`}
       </h2>
 
       {/* Image and contact information */}

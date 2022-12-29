@@ -4,7 +4,7 @@ const ImageDisplay = () => {
   return (
     <Grid
       container
-      className='h-[400px] bg-red'
+      className='h-[400px]'
       direction={{
         xs: 'column-reverse',
         md: 'row'
@@ -17,9 +17,7 @@ const ImageDisplay = () => {
         className='overflow-y-scroll  no-scrollbar'
         container
       >
-        <Grid item xs={3} md={12}>
-          one
-        </Grid>
+        <Grid item xs={3} md={12}></Grid>
         <Grid item xs={3} md={12}>
           two
         </Grid>
@@ -30,7 +28,7 @@ const ImageDisplay = () => {
           four
         </Grid>
       </Grid>
-      <Grid item xs={9} md={9.7} bgcolor='teal'>
+      <Grid item xs={9} md={9.7}>
         image preview
       </Grid>
     </Grid>
@@ -38,13 +36,3 @@ const ImageDisplay = () => {
 }
 
 export default ImageDisplay
-{
-  /* <Grid item xs={3} md={12} className=' bg-navyBlue'></Grid>
-        <Grid item xs={3} md={12} className=' bg-navyBlue'></Grid>
-        <Grid item xs={3} md={12} className=' bg-navyBlue'></Grid>
-        <Grid item xs={3} md={12} className=' bg-navyBlue'></Grid> */
-}
-{
-  /* <Grid className='w-full h-24 mb-1 bg-navyBlue'></Grid>
-        <Grid className='w-full h-24 mb-1 bg-navyBlue'></Grid> */
-}

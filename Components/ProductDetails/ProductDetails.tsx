@@ -21,7 +21,7 @@ const ProductDetails = () => {
       <Divider
         className='bg-pink'
         sx={{
-          my: 3
+          my: 2
         }}
       />
       <ProductDescription />

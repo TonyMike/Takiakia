@@ -29,7 +29,7 @@ const DetailsOne = () => {
       </div>
 
       {/* contact customer */}
-      <div className='pl-5 mt-3 flex items-center space-x-3 '>
+      <div className='mt-4 flex items-center space-x-3 '>
         <button className='border-pink shadow-sm rounded-md text-[12px] border-[1px] outline-none text-pink px-3 py-2 '>
           Show Number
         </button>
@@ -41,21 +41,21 @@ const DetailsOne = () => {
           <Link
             href='https://wa.me/+2349019404392'
             target='_blank'
-            className='text-xl'
+            className='text-3xl'
           >
             <RiWhatsappFill className='text-[#24d366]' />
           </Link>
           <Link
             href='https://wa.me/+2349019404392'
             target='_blank'
-            className='text-xl'
+            className='text-3xl'
           >
             <RiFacebookCircleFill className='text-[#3b5998]' />
           </Link>
           <Link
             href='https://wa.me/+2349019404392'
             target='_blank'
-            className='text-xl'
+            className='text-3xl'
           >
             <AiFillInstagram className='text-[#e94475]' />
           </Link>

@@ -38,21 +38,21 @@ const ProductDescription = () => {
           <Link
             href='https://wa.me/+2349019404392'
             target='_blank'
-            className='text-2xl'
+            className='text-3xl'
           >
             <RiWhatsappFill className='text-[#24d366]' />
           </Link>
           <Link
             href='https://wa.me/+2349019404392'
             target='_blank'
-            className='text-2xl'
+            className='text-3xl'
           >
             <RiFacebookCircleFill className='text-[#3b5998]' />
           </Link>
           <Link
             href='https://wa.me/+2349019404392'
             target='_blank'
-            className='text-2xl'
+            className='text-3xl'
           >
             <AiFillInstagram className='text-[#e94475]' />
           </Link>

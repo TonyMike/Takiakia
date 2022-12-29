@@ -1,4 +1,5 @@
 import { Grid } from '@mui/material'
+import Link from 'next/link'
 import ProductCard from '../Cards/ProductCard'
 
 const ProductList = ({ products }: any) => {
@@ -17,10 +18,12 @@ const ProductList = ({ products }: any) => {
           {products.slice(0, 12).map((product: any, index: number) => {
             return (
               <Grid key={index} item xs={5.7} sm={5.7} md={3.9}>
-                <ProductCard
-                  data={product}
-                  productCondition={product.id % 2 === 0 ? 'new' : 'old'}
-                />
+                <Link href={'/d'} passHref>
+                  <ProductCard
+                    data={product}
+                    productCondition={product.id % 2 === 0 ? 'new' : 'old'}
+                  />
+                </Link>
               </Grid>
             )
           })}

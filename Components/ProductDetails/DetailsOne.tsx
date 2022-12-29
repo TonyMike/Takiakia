@@ -1,7 +1,12 @@
 import Link from 'next/link'
 import { RiWhatsappFill, RiFacebookCircleFill } from 'react-icons/ri'
-import { AiFillInstagram, AiOutlineUser } from 'react-icons/ai'
+import {
+  AiFillInstagram,
+  AiOutlineFieldTime,
+  AiOutlineUser
+} from 'react-icons/ai'
 import { NairaIcon } from '../../utils/staticData'
+import { TiLocationOutline } from 'react-icons/ti'
 
 const DetailsOne = () => {
   return (
@@ -21,9 +26,15 @@ const DetailsOne = () => {
 
         <div className='flex flex-col space-y-1'>
           <p className='text-pink text-[16px]'>Anthony Oluwajuwon</p>
-          <div className=' flex items-center space-x-2 flex-wrap text-grey text-[12px]'>
-            <p>Posted 21 hours ago</p>
-            <p>Oyo Ibadan</p>
+          <div className=' flex items-center space-x-3 flex-wrap text-grey text-[12px]'>
+            <p className='flex items-center space-x-1 '>
+              <AiOutlineFieldTime fontSize={18} className='text-pink' />
+              <span>Posted 21 hours ago</span>
+            </p>
+            <p className='flex items-center space-x-1'>
+              <TiLocationOutline className='text-pink' fontSize={18} />
+              <span>Oyo Ibadan</span>
+            </p>
           </div>
         </div>
       </div>
@@ -34,7 +45,7 @@ const DetailsOne = () => {
           Show Number
         </button>
 
-        <span className='text-grey text-sm'>chat</span>
+        <span className='text-grey text-sm uppercase'>chat</span>
 
         {/* <span className='text-deepGreen'>chat</span> */}
         <div className='flex items-center space-x-3'>

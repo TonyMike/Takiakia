@@ -7,8 +7,14 @@ import {
 } from 'react-icons/ai'
 import { NairaIcon } from '../../utils/staticData'
 import { TiLocationOutline } from 'react-icons/ti'
+import { useState } from 'react'
 
 const DetailsOne = () => {
+  const [showContact, setShowContact] = useState(false)
+  const handleShowContact = () => {
+    setShowContact(prev => (prev = true))
+  }
+  console.log(showContact)
   return (
     <div className='px-3'>
       {/* product price */}
@@ -41,8 +47,15 @@ const DetailsOne = () => {
 
       {/* contact customer */}
       <div className='mt-4 flex items-center space-x-3 '>
-        <button className='border-pink shadow-sm rounded-md text-[12px] border-[1px] outline-none text-pink px-3 py-2 '>
-          Show Number
+        <button
+          className={`${
+            showContact
+              ? 'bg-pink text-white'
+              : 'border-pink text-pink border-[1px] '
+          } shadow-sm rounded-md text-[12px]  outline-none  px-3 py-2 `}
+          onClick={handleShowContact}
+        >
+          {showContact ? '09019404392' : 'Show Number'}
         </button>
 
         <span className='text-grey text-sm uppercase'>chat</span>

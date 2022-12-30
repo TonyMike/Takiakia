@@ -9,6 +9,7 @@ import { NairaIcon } from '../../utils/staticData'
 import { TiLocationOutline } from 'react-icons/ti'
 import { useContext, useState } from 'react'
 import { DetailsContext } from '../../pages/[id]'
+import Image from 'next/image'
 
 const DetailsOne = () => {
   const data: any = useContext(DetailsContext)
@@ -27,9 +28,18 @@ const DetailsOne = () => {
 
       {/* Image and contact information */}
       <div className='flex items-center my-3  space-x-3'>
-        <div className='h-16 w-16 rounded-full bg-white shadow-lg'>
+        <div className='h-16 w-16 rounded-full bg-white relative shadow-lg'>
           {/* seller avatarx image */}
-          <AiOutlineUser className='w-full h-full p-2 text-darkGrey' />
+          {data.category.image ? (
+            <Image
+              src={data.category.image}
+              alt={data.category.image}
+              layout='fill'
+              className='rounded-full'
+            />
+          ) : (
+            <AiOutlineUser className='w-full h-full p-2 text-darkGrey' />
+          )}
         </div>
 
         <div className='flex flex-col space-y-1'>

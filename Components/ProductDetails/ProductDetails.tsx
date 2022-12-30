@@ -28,17 +28,21 @@ const ProductDetails = () => {
           <DetailsOne />
         </Grid>
       </Grid>
-      <div className='px-3 hidden md:block'>
-        <ProductTitle title={`${data.title}`} />
-      </div>
+      <Grid container>
+        <Grid item xs={12} md={7.6}>
+          <div className='px-3 hidden md:block'>
+            <ProductTitle title={`${data.title}`} />
+          </div>
 
-      <Divider
-        className='bg-pink'
-        sx={{
-          my: 2
-        }}
-      />
-      <ProductDescription />
+          <Divider
+            className='bg-pink'
+            sx={{
+              my: 2
+            }}
+          />
+          <ProductDescription />
+        </Grid>
+      </Grid>
     </div>
   )
 }

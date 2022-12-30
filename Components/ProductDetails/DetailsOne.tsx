@@ -23,11 +23,12 @@ const DetailsOne = () => {
   return (
     <div className='px-3'>
       {/* product price */}
-      <h2 className='text-xl my-2 text-offBlue'>
-        <NairaIcon />
-        {`${data.price}`}
-      </h2>
-
+      <div className='md:bg-lightPurple md:px-3 md:shadow-md md:py-[3px]'>
+        <h2 className='text-xl my-2 text-offBlue'>
+          <NairaIcon />
+          {`${data.price}`}
+        </h2>
+      </div>
       {/* Image and contact information */}
       <div className='flex items-center my-3  space-x-3'>
         <div className='h-16 w-16 rounded-full bg-white relative shadow-lg'>

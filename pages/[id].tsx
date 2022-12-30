@@ -26,25 +26,13 @@ export default ProductInfo
 export async function getStaticPaths () {
   const api = process.env.API_URL
   const apiCall = await axios.get(`${api}`)
-  console.log('this is the api', { apiCall })
 
-  const path = apiCall.data.map((route: any) => ({
+  const paths = apiCall.data.map((route: any) => ({
     params: { id: route.id.toString() }
   }))
-  const paths = Array(200)
-    .fill(1)
-    .map((x, i) => {
-      return {
-        params: { id: String(i) }
-      }
-    })
+
   return {
     paths,
-    // paths: [
-    //   {
-    //     params: { id: '1' }
-    //   }
-    // ],
     fallback: false
   }
 }
@@ -52,8 +40,8 @@ export async function getStaticPaths () {
 export async function getStaticProps (context: any) {
   const { params } = context
   const api = process.env.API_URL
-  const apiCall = await fetch(`${api}/${params.id}`)
-  const data = await apiCall.json()
+  const apiCall = await axios.get(`${api}/${params.id}`)
+  const data = apiCall.data
   return {
     props: {
       data

@@ -10,6 +10,8 @@ import { TiLocationOutline } from 'react-icons/ti'
 import { useContext, useState } from 'react'
 import { DetailsContext } from '../../pages/[id]'
 import Image from 'next/image'
+import SafetyTips from './SafetyTips'
+import { Paper } from '@mui/material'
 
 const DetailsOne = () => {
   const data: any = useContext(DetailsContext)
@@ -96,6 +98,10 @@ const DetailsOne = () => {
             <AiFillInstagram className='text-[#e94475]' />
           </Link>
         </div>
+      </div>
+
+      <div className='hidden md:block mt-5'>
+        <SafetyTips />
       </div>
     </div>
   )

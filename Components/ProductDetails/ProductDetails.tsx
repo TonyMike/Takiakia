@@ -4,6 +4,7 @@ import { DetailsContext } from '../../pages/[id]'
 import DetailsOne from './DetailsOne'
 import ImageDisplay from './ImageDisplay'
 import ProductDescription from './ProductDescription'
+import SafetyTips from './SafetyTips'
 
 const ProductTitle = ({ title }: { title: string }) => {
   return (
@@ -17,6 +18,7 @@ const ProductDetails = () => {
   const data: any = useContext(DetailsContext)
   return (
     <div className='md:p-10'>
+      {/* image gallery and user information */}
       <Grid container>
         <Grid item xs={12} md={8}>
           <ImageDisplay />
@@ -28,6 +30,8 @@ const ProductDetails = () => {
           <DetailsOne />
         </Grid>
       </Grid>
+
+      {/* product description */}
       <Grid container>
         <Grid item xs={12} md={7.6}>
           <div className='px-3 hidden md:block'>
@@ -40,7 +44,14 @@ const ProductDetails = () => {
               my: 2
             }}
           />
+
           <ProductDescription />
+          <div className='my-3 mb-5 md:hidden'>
+            <SafetyTips />
+          </div>
+
+          {/* related product list */}
+          <div></div>
         </Grid>
       </Grid>
     </div>

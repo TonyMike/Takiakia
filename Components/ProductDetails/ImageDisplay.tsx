@@ -54,7 +54,7 @@ const ImageDisplay = () => {
         <Image
           src={selected ? selected : data.images[0]}
           layout='fill'
-          alt={`${data.title}`}
+          alt={data.title}
         />
       </Grid>
     </Grid>

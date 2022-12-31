@@ -61,22 +61,22 @@ const DetailsOne = () => {
       </div>
 
       {/* contact customer */}
-      <div className='mt-4 flex items-center space-x-3 '>
+      <div className='mt-4 flex-col sm:flex-row md:flex-col space-y-2 flex  space-x-3 '>
         <button
           className={`${
             showContact
               ? 'bg-pink text-white'
               : 'border-pink text-pink border-[1px] '
-          } shadow-sm rounded-md text-[12px]  outline-none  px-3 py-2 `}
+          } shadow-sm rounded-md text-[13px] md:text-[15px]  outline-none  px-3 py-2 `}
           onClick={handleShowContact}
         >
           {showContact ? '09019404392' : 'Show Number'}
         </button>
 
-        <span className='text-grey text-sm uppercase'>chat</span>
-
         {/* <span className='text-deepGreen'>chat</span> */}
         <div className='flex items-center space-x-3'>
+          <span className='text-grey text-sm font-bold uppercase'>chat</span>
+
           <Link
             href='https://wa.me/+2349019404392'
             target='_blank'

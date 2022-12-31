@@ -3,11 +3,11 @@ import { linksType, nairaProps, StateProps } from '../@types/types'
 export const SupportLinks: linksType[] = [
   {
     title: 'support@takiakia.com',
-    href: ''
+    href: '#'
   },
   {
     title: 'Tips for safety',
-    href: ''
+    href: '#'
   },
   {
     title: 'Contact Us',
@@ -15,65 +15,58 @@ export const SupportLinks: linksType[] = [
   },
   {
     title: 'FAQ',
-    href: ''
+    href: '#'
   }
 ]
 
 export const AboutLinks: linksType[] = [
   {
     title: 'About Takiakia',
-    href: ''
+    href: '#'
   },
 
   {
     title: 'Terms and Conditions',
-    href: ''
+    href: '#'
   },
   {
     title: 'Privacy Policy',
-    href: ''
+    href: '#'
   },
   {
     title: 'Cookie Policy',
-    href: ''
+    href: '#'
   }
 ]
 
 export const ResourcesLinks: linksType[] = [
   {
     title: 'Our Blog',
-    href: ''
+    href: '#'
   },
   {
     title: 'Twitter',
-    href: ''
+    href: '#'
   },
   {
     title: 'Takiakia on Facebook',
-    href: ''
+    href: '#'
   },
   {
     title: 'Instagram',
-    href: ''
+    href: '#'
   }
 ]
 
 export const NavLinks: linksType[] = [
   { title: 'Home', href: '/' },
   { title: 'About us', href: '/pages/about' },
-  { title: 'Blog', href: '' },
+  { title: 'Blog', href: '/pages/blog' },
   { title: 'FAQ', href: '/pages/faq' }
 ]
 
 export const NairaIcon = () => {
-  return (
-    <span
-    // style={{ fontWeight: 500 }}
-    // className={`text-[${fontSize}px] lg:text-[${fontSize + 7}]`}
-    >
-      {/* &#8358; */}₦
-    </span>
-  )
+  return <span>₦</span>
 }
 
 export const States: StateProps[] = [

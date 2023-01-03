@@ -9,7 +9,7 @@ const ProductList = ({ products }: any) => {
         {products.slice(0, 12).map((product: any, index: number) => {
           return (
             <Grid key={index} item xs={5.7} sm={5.7} md={3.9}>
-              <Link href={`${product.attributes.productId}`} passHref>
+              <Link href={`${product.id}`} passHref>
                 <ProductCard data={product} />
               </Link>
             </Grid>

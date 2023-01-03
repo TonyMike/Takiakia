@@ -11,12 +11,15 @@ const ImageDisplay = () => {
   const handleImageClick = (image: string, index: number) => {
     setActiveStep(prev => (prev = index))
     setSelected(image)
+    console.log(selected, 'selected')
   }
+  const imageList = data.images.data
+  const firstImage = imageList[0].attributes.url
 
   return (
     <Grid
       container
-      className='h-[400px]  justify-between md:justify-start'
+      className='h-[400px] lg:h-[420px] lg:py-5 py-2 shadow-md justify-between md:justify-start'
       direction={{
         xs: 'column-reverse',
         md: 'row'
@@ -32,7 +35,8 @@ const ImageDisplay = () => {
         columnGap={0.5}
         rowGap={0.5}
       >
-        {data.images.map((image: string, index: any) => {
+        {imageList.map((item: any, index: any) => {
+          const image = item.attributes.url
           return (
             <Grid
               key={index}
@@ -44,13 +48,7 @@ const ImageDisplay = () => {
                 handleImageClick(image, index)
               }}
             >
-              {/* <Image src={image} layout='fill' alt={`${data.title}`} /> */}
-              <Image
-                // src={selected ? selected : data.images[0]}
-                src='/images/iphone13.jpg'
-                layout='fill'
-                alt={data.title}
-              />
+              <Image src={image} layout='fill' objectFit='contain' alt='' />
             </Grid>
           )
         })}
@@ -58,8 +56,8 @@ const ImageDisplay = () => {
 
       <Grid item xs={8.9} md={9} className='relative'>
         <Image
-          // src={selected ? selected : data.images[0]}
-          src='/images/iphone13.jpg'
+          src={selected ? selected : firstImage}
+          objectFit='contain'
           layout='fill'
           alt={data.title}
         />
@@ -69,3 +67,7 @@ const ImageDisplay = () => {
 }
 
 export default ImageDisplay
+
+{
+  /* <Image src={image} layout='fill' alt='some picture' /> */
+}

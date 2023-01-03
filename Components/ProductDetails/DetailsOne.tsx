@@ -15,7 +15,7 @@ import { Paper } from '@mui/material'
 
 const DetailsOne = () => {
   const data: any = useContext(DetailsContext)
-
+  // console.log(data)
   const [showContact, setShowContact] = useState(false)
   const handleShowContact = () => {
     setShowContact(prev => (prev = true))
@@ -33,7 +33,7 @@ const DetailsOne = () => {
       <div className='flex items-center my-3  space-x-3'>
         <div className='h-16 w-16 rounded-full bg-white relative shadow-lg'>
           {/* seller avatarx image */}
-          {data.category.image ? (
+          {/* {data.category.image ? (
             <Image
               src={data.category.image}
               alt={data.category.image}
@@ -42,11 +42,11 @@ const DetailsOne = () => {
             />
           ) : (
             <AiOutlineUser className='w-full h-full p-2 text-darkGrey' />
-          )}
+          )} */}
         </div>
 
         <div className='flex flex-col space-y-1'>
-          <p className='text-pink text-[16px]'>Anthony Oluwajuwon</p>
+          <p className='text-pink text-[16px]'>{data.name}</p>
           <div className=' flex items-center space-x-3 flex-wrap text-grey text-[12px]'>
             <p className='flex items-center space-x-1 '>
               <AiOutlineFieldTime fontSize={18} className='text-pink' />

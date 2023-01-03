@@ -16,6 +16,7 @@ const ProductTitle = ({ title }: { title: string }) => {
 }
 const ProductDetails = () => {
   const data: any = useContext(DetailsContext)
+  // console.log(data)
   return (
     <div className='md:p-10'>
       {/* image gallery and user information */}

@@ -7,12 +7,13 @@ import axios from 'axios'
 
 export const DetailsContext = createContext('')
 const ProductInfo: NextPage = ({ data }: any) => {
+  const { attributes } = data.data
   return (
     <div>
       <Head>
         <title>Product details</title>
       </Head>
-      <DetailsContext.Provider value={data}>
+      <DetailsContext.Provider value={attributes}>
         <Layout>
           <ProductDetails />
         </Layout>
@@ -24,10 +25,11 @@ const ProductInfo: NextPage = ({ data }: any) => {
 export default ProductInfo
 
 export async function getStaticPaths () {
-  const api = process.env.API_URL
-  const apiCall = await axios.get(`${api}`)
+  const api = process.env.ALL_PRODUCT
+  const res = await axios.get(`${api}`)
+  const data = res.data.data
 
-  const paths = apiCall.data.map((route: any) => ({
+  const paths = data.map((route: any) => ({
     params: { id: route.id.toString() }
   }))
 
@@ -39,9 +41,13 @@ export async function getStaticPaths () {
 
 export async function getStaticProps (context: any) {
   const { params } = context
+
   const api = process.env.API_URL
-  const apiCall = await axios.get(`${api}/${params.id}`)
+  const apiCall = await axios.get(
+    `https://takiakia-backend.onrender.com/api/products/${params.id}?populate=*`
+  )
   const data = apiCall.data
+  // console.log(data)
   return {
     props: {
       data

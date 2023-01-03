@@ -1,3 +1,4 @@
+import axios from 'axios'
 import { NextPage } from 'next'
 import Head from 'next/head'
 import { Router, useRouter } from 'next/router'
@@ -33,6 +34,10 @@ const Home = ({ data }: { data: any }) => {
           </div>
 
           <div className={` grow`}>
+            <h3 className='text-[25px] text-center  py-2 text-navyBlue'>
+              Lastest Sells
+            </h3>
+
             <ProductList products={data} />
           </div>
         </main>
@@ -46,14 +51,9 @@ const Home = ({ data }: { data: any }) => {
 export default Home
 
 export async function getStaticProps () {
-  const url = process.env.API_URL
-  const callApi = await fetch(`${url}`)
-    .then(response => response.json())
-    .then(data => data)
-    .catch(err => {
-      return JSON.stringify(err)
-    })
-  const data = await callApi
+  const url = process.env.ALL_PRODUCT
+  const res = await axios.get(`${url}`)
+  const data = res.data.data
   return {
     props: {
       data

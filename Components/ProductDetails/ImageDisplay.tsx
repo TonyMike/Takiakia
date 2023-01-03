@@ -44,7 +44,13 @@ const ImageDisplay = () => {
                 handleImageClick(image, index)
               }}
             >
-              <Image src={image} layout='fill' alt={`${data.title}`} />
+              {/* <Image src={image} layout='fill' alt={`${data.title}`} /> */}
+              <Image
+                // src={selected ? selected : data.images[0]}
+                src='/images/iphone13.jpg'
+                layout='fill'
+                alt={data.title}
+              />
             </Grid>
           )
         })}
@@ -52,7 +58,8 @@ const ImageDisplay = () => {
 
       <Grid item xs={8.9} md={9} className='relative'>
         <Image
-          src={selected ? selected : data.images[0]}
+          // src={selected ? selected : data.images[0]}
+          src='/images/iphone13.jpg'
           layout='fill'
           alt={data.title}
         />

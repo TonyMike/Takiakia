@@ -13,8 +13,7 @@ const nextConfig = {
   //   ]
   // }
   images: {
-    // domains: ['fakestoreapi.com']
-    domains: ['api.lorem.space']
+    domains: ['res.cloudinary.com']
   }
 }
 

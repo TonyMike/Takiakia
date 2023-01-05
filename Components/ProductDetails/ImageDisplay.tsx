@@ -10,7 +10,7 @@ const ImageDisplay = () => {
   })
   // console.log(imageList)
 
-  const [active, setActive] = useState(2)
+  const [active, setActive] = useState(0)
 
   const nextImage = () => {
     setActive(prev => prev + 1)
@@ -31,8 +31,6 @@ const ImageDisplay = () => {
         xs: 'column-reverse',
         md: 'row'
       }}
-      // columnGap={{ xs: 1, md: 0.3 }}
-      // rowGap={{ xs: 0.5, md: 0.7 }}
     >
       <Grid
         item
@@ -43,15 +41,9 @@ const ImageDisplay = () => {
         }}
         xs={2.5}
         md={2.3}
-        // spacing={1}
         columnGap={0.5}
         rowGap={0.5}
       >
-        {/* <Grid item xs={2.9} className='bg-pink'></Grid>
-        <Grid item xs={2.9} className='bg-pink'></Grid>
-        <Grid item xs={2.9} className='bg-pink'></Grid>
-        <Grid item xs={2.9} className='bg-pink'></Grid> */}
-
         {imageList.slice(0, 4).map((x: string, i: number) => {
           if (i === 3) {
             return (

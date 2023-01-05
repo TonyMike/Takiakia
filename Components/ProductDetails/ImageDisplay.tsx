@@ -5,59 +5,92 @@ import { DetailsContext } from '../../pages/[id]'
 
 const ImageDisplay = () => {
   const data: any = useContext(DetailsContext)
-  const [activeStep, setActiveStep] = useState(0)
-  const [selected, setSelected] = useState('')
+  const imageList = data.images.data.map((i: any, index: any) => {
+    return i.attributes.url
+  })
+  // console.log(imageList)
 
-  const handleImageClick = (image: string, index: number) => {
-    setActiveStep(prev => (prev = index))
-    setSelected(image)
-    console.log(selected, 'selected')
+  const [active, setActive] = useState(2)
+
+  const nextImage = () => {
+    setActive(prev => prev + 1)
   }
-  const imageList = data.images.data
-  const firstImage = imageList[0].attributes.url
+  const previousImage = () => {
+    setActive(prev => prev - 1)
+  }
+
+  const handleImageClick = (position: number) => {
+    setActive(position)
+  }
 
   return (
     <Grid
       container
-      className='h-[400px] lg:h-[420px] lg:py-5 py-2 shadow-md justify-between md:justify-start'
+      className='h-[400px] lg:h-[420px]  justify-between p-1 shadow-md '
       direction={{
         xs: 'column-reverse',
         md: 'row'
       }}
-      columnGap={{ xs: 1, md: 0.7 }}
+      // columnGap={{ xs: 1, md: 0.3 }}
+      // rowGap={{ xs: 0.5, md: 0.7 }}
     >
       <Grid
         item
-        xs={3}
-        md={2.3}
-        className='overflow-y-scroll  no-scrollbar'
         container
+        direction={{
+          xs: 'row',
+          md: 'column'
+        }}
+        xs={2.5}
+        md={2.3}
+        // spacing={1}
         columnGap={0.5}
         rowGap={0.5}
       >
-        {imageList.map((item: any, index: any) => {
-          const image = item.attributes.url
-          return (
-            <Grid
-              key={index}
-              item
-              xs={3.9}
-              md={12}
-              className='relative'
-              onClick={() => {
-                handleImageClick(image, index)
-              }}
-            >
-              <Image src={image} layout='fill' objectFit='contain' alt='' />
-            </Grid>
-          )
+        {/* <Grid item xs={2.9} className='bg-pink'></Grid>
+        <Grid item xs={2.9} className='bg-pink'></Grid>
+        <Grid item xs={2.9} className='bg-pink'></Grid>
+        <Grid item xs={2.9} className='bg-pink'></Grid> */}
+
+        {imageList.slice(0, 4).map((x: string, i: number) => {
+          if (i === 3) {
+            return (
+              <Grid
+                key={i}
+                item
+                xs={2.9}
+                onClick={() => handleImageClick(i)}
+                className='relative cursor-pointer'
+              >
+                <div className='absolute h-full w-full bg-[rgba(0,0,0,0.5)] z-[1] flex flex-col space-y-[-5px] text-white justify-center items-center'>
+                  <p>+{imageList.length - 4}</p>
+                  <p className='text-sm md:text-md'>images</p>
+                </div>
+                <Image src={x} alt='.....' layout='fill' />
+              </Grid>
+            )
+          } else {
+            return (
+              <Grid
+                key={i}
+                item
+                xs={2.9}
+                onClick={() => handleImageClick(i)}
+                className='relative cursor-pointer'
+              >
+                <Image src={x} alt='.....' layout='fill' />
+              </Grid>
+            )
+          }
         })}
       </Grid>
 
-      <Grid item xs={8.9} md={9} className='relative'>
+      {/*  preview image */}
+      <Grid item xs={9.4} md={9.6} className='relative bg-deepGreen w-full'>
+        {/* preview image */}
         <Image
-          src={selected ? selected : firstImage}
-          objectFit='contain'
+          src={imageList[active]}
+          objectFit='cover'
           layout='fill'
           alt={data.title}
         />
@@ -70,4 +103,42 @@ export default ImageDisplay
 
 {
   /* <Image src={image} layout='fill' alt='some picture' /> */
+}
+// <Grid
+//   key={x}
+//   item
+//   xs={3.9}
+//   md={12}
+//   className='relative  border-2 border-pink '
+//   // onClick={() => {
+//   //   handleImageClick(image, index)
+//   // }}
+// >
+//   {/* <Image src={image} layout='fill' objectFit='contain' alt='' /> */}
+// </Grid>
+{
+  /* images list */
+}
+{
+  /* <Grid
+        item
+        xs={3}
+        md={2.5}
+        className='max-h-[100px] overflow-hidden flex flex-nowrap'
+      > */
+}
+{
+  /* {bgcolor.map(x => {
+          return (
+            <div
+              style={{ backgroundColor: x }}
+              className={`bg-[${x}] h-full overflow-hidden md:h-[33%] inline-block w-[150px] md:w-full`}
+            >
+              {x}
+            </div>
+          )
+        })} */
+}
+{
+  /* </Grid> */
 }

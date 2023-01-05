@@ -20,13 +20,15 @@ const DetailsOne = () => {
   const handleShowContact = () => {
     setShowContact(prev => (prev = true))
   }
+
+  const price = parseInt(data.price.replaceAll(',', '')).toLocaleString()
+
   return (
     <div className='px-3'>
       {/* product price */}
       <div className='md:bg-lightPurple md:px-3 md:shadow-md md:py-[3px]'>
         <h2 className='text-xl my-2 text-offBlue'>
-          <NairaIcon />
-          {`${data.price}`}
+          <NairaIcon /> {price}
         </h2>
       </div>
       {/* Image and contact information */}

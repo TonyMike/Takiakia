@@ -70,7 +70,7 @@ const ImageDisplay = () => {
                 onClick={() => handleImageClick(i)}
                 className='relative cursor-pointer'
               >
-                <Image src={x} alt='.....' layout='fill' />
+                <Image src={x} alt={data.title} layout='fill' />
               </Grid>
             )
           }

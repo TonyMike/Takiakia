@@ -31,30 +31,3 @@
   }
 }
 
-.b-fixed-element-outer {
-  position:relative;
-  flex:1;
-  height:100%;
-  z-index:5
- }
- .b-fixed-element-outer.b-fixed-element-outer--right {
-  display:flex;
-  flex-direction:row-reverse
- }
- .b-fixed-element {
-  /* position:absolute; */
-  transition:margin .2s,transform .2s ease;
-  display:flex;
-  width:100%
- }
- .b-fixed-element.b-fixed-element-static {
-  position:static
- }
- .b-fixed-element.b-fixed-element-move {
-  position:fixed;
-  width:-moz-fit-content;
-  width:fit-content
- }
- .b-fixed-element.b-fixed-element-move--margin {
-  margin-top:10px
- }

@@ -1,5 +1,5 @@
 import { Grid } from '@mui/material'
-import Image from "next/image";
+import Image from 'next/image'
 import InputText from '../../Reusables/InputText'
 import TextArea from '../../Reusables/TextArea'
 
@@ -25,18 +25,23 @@ const ContactUs = () => {
               </div>
               <InputText placeholder='Subject' />
               <TextArea placeholder='Write your message' />
-              <button className='bg-pink rounded-sm border-none outline-none text-white px-4 py-2 text-sm self-start'>
+              <button className='bg-orange rounded-sm border-none outline-none text-white px-4 py-2 text-sm self-start'>
                 Send Mail
               </button>
             </div>
           </form>
         </Grid>
         <Grid item xs={12} md={5.5} className='hidden md:block relative'>
-          <Image src='/images/contactUs.png' alt='contact us' fill sizes="100vw" />
+          <Image
+            src='/images/contactUs.png'
+            alt='contact us'
+            fill
+            sizes='100vw'
+          />
         </Grid>
       </Grid>
     </div>
-  );
+  )
 }
 
 export default ContactUs

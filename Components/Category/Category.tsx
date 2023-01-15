@@ -108,7 +108,7 @@ const Category = () => {
             return (
               <li
                 key={index}
-                className='capitalize w-[200px] md:w-[234px] py-2 md:pl-5 lg:pl-6 text-[15px] flex space-x-2 text-[#3d3d3d] hover:bg-pink hover:text-white transition-all ease-in-out duration-200 cursor-pointer hover:ease-in '
+                className='capitalize w-[200px] md:w-[234px] py-2 md:pl-5 lg:pl-6 text-[15px] flex space-x-2 text-[#3d3d3d] hover:bg-orange hover:text-white transition-all ease-in-out duration-200 cursor-pointer hover:ease-in '
               >
                 <Image
                   src={category.icon}

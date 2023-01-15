@@ -40,7 +40,7 @@ const ProductDetails = () => {
           </div>
 
           <Divider
-            className='bg-pink'
+            className='bg-orange'
             sx={{
               my: 2
             }}

@@ -27,7 +27,7 @@ const HeroDesktop = () => {
         <h1 className='text-3xl'>Search Result</h1>
         <input
           type='text'
-          className='text-md outline-none w-2/5 border-pink border-[1px] p-3 rounded-md'
+          className='text-md outline-none w-2/5 border-orange border-[1px] p-3 rounded-md'
           placeholder='hp laptop'
         />
       </div>

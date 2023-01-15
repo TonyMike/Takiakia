@@ -98,7 +98,7 @@ const FilterCategory = () => {
                 ) : null}
               </div>
             </div>
-            <button className='pink-btn'>Apply</button>
+            <button className='orange-btn'>Apply</button>
           </div>
         </div>
       </div>

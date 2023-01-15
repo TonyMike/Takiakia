@@ -9,7 +9,7 @@ module.exports = {
   ],
   theme: {
     colors: {
-      pink: '#f15115',
+      orange: '#f15115',
       red: '#ff0000',
       blue: '#2f1ac4',
       skyBlue: '#f2f5ff',

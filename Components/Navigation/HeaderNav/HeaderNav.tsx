@@ -34,7 +34,7 @@ const HeaderNav = () => {
 
         <div className='flex items-center space-x-3'>
           <Link href={'/postAd'} passHref>
-            <button className='text-[12px] outline-none border-pink border-[1px] rounded-[25px] px-3 py-2 text-pink'>
+            <button className='text-[12px] outline-none border-orange border-[1px] rounded-[25px] px-3 py-2 text-orange'>
               Sell Now
             </button>
           </Link>
@@ -131,7 +131,7 @@ const HeaderNav = () => {
           })}
         </ul>
         <Link href={'/postAd'} passHref>
-          <button className='pink-btn border-none outline-none ease-in-out shadow-md duration-300 hover:scale-105'>
+          <button className='orange-btn border-none outline-none ease-in-out shadow-md duration-300 hover:scale-105'>
             Sell Now
           </button>
         </Link>

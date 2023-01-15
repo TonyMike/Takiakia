@@ -14,8 +14,8 @@
 
 @layer components {
 
-  .pink-btn {
-    @apply bg-pink rounded-[20px] px-6 py-2 text-[white]
+  .orange-btn {
+    @apply bg-orange rounded-[20px] px-6 py-2 text-[white]
   }
 }
 

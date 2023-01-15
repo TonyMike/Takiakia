@@ -18,7 +18,7 @@ const Hero = () => {
       />
       {/* hero message */}
       <div className='hidden md:block'>
-        <h3 className='text-2xl text-pink'>Best place to sell it!</h3>
+        <h3 className='text-2xl text-orange'>Best place to sell it!</h3>
         <h2 className='text-4xl w-[500px] mt-3 font-Poppins text-[#0D0E43]'>
           Buying and selling as a student has never been easier
         </h2>

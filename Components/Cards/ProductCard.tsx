@@ -10,7 +10,7 @@ const ProductCard = ({ data }: { data: any }) => {
     <div className='shadow-md relative px-2 py-3 cursor-pointer'>
       <p
         className={`absolute right-[8px] ${
-          attributes.condition === 'new' ? 'bg-pink' : 'bg-deepGreen'
+          attributes.condition === 'new' ? 'bg-orange' : 'bg-deepGreen'
         } text-white px-3 py-1 text-[11px] capitalize z-[2] `}
       >
         {attributes.condition}

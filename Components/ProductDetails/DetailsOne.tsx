@@ -67,8 +67,8 @@ const DetailsOne = () => {
         <button
           className={`${
             showContact
-              ? 'bg-pink text-white'
-              : 'border-pink text-pink border-[1px] '
+              ? 'bg-orange text-white'
+              : 'border-orange text-orange border-[1px] '
           } shadow-sm rounded-md text-[13px] md:text-[15px]  outline-none  px-3 py-2 `}
           onClick={handleShowContact}
         >

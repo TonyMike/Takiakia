@@ -32,7 +32,7 @@ const SearchBox = ({ noLocation }: Location) => {
     <div className=' w-[100%] px-10 flex items-center justify-center relative bottom-[-20px] m:bottom-0  space-x-6'>
       {/* search button */}
       <form onSubmit={handleSubmit(searchSubmit)}>
-        <div className='max-w-[500px] bg-white  h-[45px] px-5 rounded-md border-[1px] border-pink flex justify-between items-center  '>
+        <div className='max-w-[500px] bg-white  h-[45px] px-5 rounded-md border-[1px] border-orange flex justify-between items-center  '>
           <input
             type='text'
             placeholder='Looking for something...'
@@ -58,7 +58,7 @@ const SearchBox = ({ noLocation }: Location) => {
           <span className='text-navyBlue'>Abuja</span>
 
           <span>
-            <BsChevronDown className='text-pink ml-5 text-[12px] font-bold' />
+            <BsChevronDown className='text-orange ml-5 text-[12px] font-bold' />
           </span>
         </button>
       </div>

@@ -6,7 +6,7 @@ const Dashboard = () => {
       <Head>
         <title>Dashboard - Tony Michael</title>
       </Head>
-      user Dashboard
+      <h1>created user Dashboard</h1>
     </div>
   )
 }

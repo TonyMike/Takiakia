@@ -9,7 +9,7 @@ module.exports = {
   ],
   theme: {
     colors: {
-      pink: '#fb2e86',
+      pink: '#f15115',
       red: '#ff0000',
       blue: '#2f1ac4',
       skyBlue: '#f2f5ff',
@@ -20,7 +20,7 @@ module.exports = {
       lightPurple: '#f2f0ff',
       purple: '#7e33e0',
       offPurple: '#9563b5',
-      deepGreen: '#428c91',
+      deepGreen: '#018995',
       white: '#ffffff',
       grey: '#9295AA',
       darkGrey: '#000000b3'

@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { NavLinks } from '../../../utils/staticData'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const HeaderNav = () => {
   const [show, setShow] = useState(false)
@@ -21,7 +22,16 @@ const HeaderNav = () => {
       ) : null}
       {/* mobile header */}
       <nav className='md:hidden flex justify-between items-center py-4 px-4 pr-2 sm:px-10 '>
-        <h2>Logo</h2>
+        <Link href={'/'} passHref>
+          <div className='relative h-[40px] w-[120px] z-30 '>
+            <Image
+              src='/icons/TAKIAKIALOGO.svg'
+              alt='takiakia logo'
+              layout='fill'
+            />
+          </div>
+        </Link>
+
         <div className='flex items-center space-x-3'>
           <Link href={'/postAd'} passHref>
             <button className='text-[12px] outline-none border-pink border-[1px] rounded-[25px] px-3 py-2 text-pink'>
@@ -102,7 +112,15 @@ const HeaderNav = () => {
 
       {/* desktop header */}
       <nav className='hidden md:flex justify-between items-center px-20 py-3'>
-        <div className='Poppins text-4xl'>logo</div>
+        <Link href={'/'} passHref>
+          <div className='relative h-[40px] w-[150px] z-30 '>
+            <Image
+              src='/icons/TAKIAKIALOGO.svg'
+              alt='takiakia logo'
+              layout='fill'
+            />
+          </div>
+        </Link>
         <ul className='flex'>
           {NavLinks.map((link, index) => {
             return (

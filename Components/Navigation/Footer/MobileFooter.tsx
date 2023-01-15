@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import SubscribeButton from '../../../Reusables/SubscribeButton'
 import {
@@ -9,7 +10,15 @@ import {
 const MobileFooter = () => {
   return (
     <div className='px-5 py-3 sm:px-24'>
-      <h2 className='mb-3'>Logo</h2>
+      <Link href={'/'} passHref>
+        <div className='relative h-[40px] w-[120px] z-30 '>
+          <Image
+            src='/icons/TAKIAKIALOGO.svg'
+            alt='takiakia logo'
+            layout='fill'
+          />
+        </div>
+      </Link>
       <div className='flex mt-3'>
         <SubscribeButton />
       </div>

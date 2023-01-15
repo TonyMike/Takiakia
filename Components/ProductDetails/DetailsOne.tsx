@@ -48,14 +48,14 @@ const DetailsOne = () => {
         </div>
 
         <div className='flex flex-col space-y-1'>
-          <p className='text-pink text-[16px] capitalize'>{data.name}</p>
+          <p className='text-deepGreen text-[16px] capitalize'>{data.name}</p>
           <div className=' flex items-center space-x-3 flex-wrap text-grey text-[12px]'>
             <p className='flex items-center space-x-1 '>
-              <AiOutlineFieldTime fontSize={18} className='text-pink' />
+              <AiOutlineFieldTime fontSize={18} className='text-deepGreen' />
               <span>Posted 21 hours ago</span>
             </p>
             <p className='flex items-center space-x-1'>
-              <TiLocationOutline className='text-pink' fontSize={18} />
+              <TiLocationOutline className='text-deepGreen' fontSize={18} />
               <span>UI, Ibadan</span>
             </p>
           </div>

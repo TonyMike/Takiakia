@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import SubscribeButton from '../../../Reusables/SubscribeButton'
 import {
@@ -10,7 +11,15 @@ const DesktopFooter = () => {
   return (
     <div className='px-5 flex space-x-6 flex-wrap py-3 justify-around'>
       <div>
-        <h2 className='mb-4'>Logo</h2>
+        <Link href={'/'} passHref>
+          <div className='relative h-[40px] w-[120px] z-30 '>
+            <Image
+              src='/icons/TAKIAKIALOGO.svg'
+              alt='takiakia logo'
+              layout='fill'
+            />
+          </div>
+        </Link>
         <SubscribeButton />
       </div>
       <div>

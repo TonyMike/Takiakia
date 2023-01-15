@@ -2,6 +2,7 @@ import '../styles/globals.css'
 import { AppProps } from 'next/app'
 import { createTheme, ThemeProvider } from '@mui/material'
 import { Analytics } from '@vercel/analytics/react'
+import Head from 'next/head'
 
 const theme = createTheme({
   breakpoints: {
@@ -18,6 +19,9 @@ const theme = createTheme({
 export default function App ({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
+      <Head>
+        <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+      </Head>
       <Component {...pageProps} />
       <Analytics />
     </ThemeProvider>

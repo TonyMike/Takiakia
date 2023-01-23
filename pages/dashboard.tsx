@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-const Dashboard = () => {
+const DashboardPage = () => {
   return (
     <div>
       <Head>
@@ -11,4 +11,4 @@ const Dashboard = () => {
   )
 }
 
-export default Dashboard
+export default DashboardPage

@@ -135,11 +135,17 @@ const HeaderNav = () => {
             )
           })}
         </ul> */}
+        <div>
+          <div>
+            <p>Account</p>
+          </div>
         <Link href={'/postAd'} passHref>
           <button className='orange-btn border-none outline-none ease-in-out shadow-md duration-300 hover:scale-105'>
             Sell Now
           </button>
         </Link>
+        </div>
+
       </nav>
     </header>
   )

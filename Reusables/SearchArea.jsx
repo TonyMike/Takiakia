@@ -8,7 +8,7 @@ const SearchArea = () => {
         placeholder='What are you looking?'
         className='outline-none px-3 text-sm w-[85%] md:w-[90%]'
       />
-      <div className=' w-[15%] md:w-[10%] bg-deepGreen flex items-center justify-center'>
+      <div className=' w-[15%] md:w-[10%] bg-deepGreen cursor-pointer flex items-center justify-center'>
         <AiOutlineSearch className='text-white text-xl' />
       </div>
     </div>

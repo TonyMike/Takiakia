@@ -1,14 +1,18 @@
 import { RiMenu3Fill } from 'react-icons/ri'
 import { CgClose } from 'react-icons/cg'
 import { motion } from 'framer-motion'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { NavLinks } from '../../../utils/staticData'
 import Link from 'next/link'
 import Image from 'next/image'
 import SearchArea from '../../../Reusables/SearchArea'
+import { BsPersonFill } from 'react-icons/bs'
+import DropDown from '../../../Reusables/DropDown'
+// import { IoPersonOutline } from 'react-icons/io'
 
 const HeaderNav = () => {
   const [show, setShow] = useState(false)
+  const [hover, setHover] = useState(false)
 
   const open = () => {
     setShow(prev => (prev = true))
@@ -16,6 +20,17 @@ const HeaderNav = () => {
   const close = () => {
     setShow(prev => (prev = false))
   }
+  const links = [
+    {
+      link: 'Login',
+      href: '/login'
+    },
+    {
+      link: 'Register',
+      href: '/register'
+    }
+  ]
+  // console.log(hover)
   return (
     <header className=' sticky top-0 bg-white md:bg-lightPurple shadow-md md:shadow-none z-10'>
       {show ? (
@@ -126,26 +141,40 @@ const HeaderNav = () => {
         <div className='w-[420px]'>
           <SearchArea />
         </div>
-        {/* <ul className='flex'>
-          {NavLinks.map((link, index) => {
-            return (
-              <Link href={link.href} key={index}>
-                <li className='mx-5 cursor-pointer'>{link.title}</li>
-              </Link>
-            )
-          })}
-        </ul> */}
-        <div>
-          <div>
-            <p>Account</p>
-          </div>
-        <Link href={'/postAd'} passHref>
-          <button className='orange-btn border-none outline-none ease-in-out shadow-md duration-300 hover:scale-105'>
-            Sell Now
-          </button>
-        </Link>
-        </div>
 
+        <div className='flex  items-center space-x-3'>
+          <Link href={'/postAd'} passHref>
+            <button className='orange-btn border-none outline-none ease-in-out shadow-md duration-300 hover:scale-105'>
+              Sell Now
+            </button>
+          </Link>
+          <DropDown
+            title={'Account'}
+            icon={<BsPersonFill className='text-deepGreen text-xl' />}
+            links={links}
+          />
+          {/* <div
+            className=' cursor-pointer relative w-40 '
+            onMouseEnter={() => setHover(true)}
+            // onMouseLeave={() => setHover(false)}
+          >
+            <div className='flex rounded-lg items-center space-x-2'>
+              <BsPersonFill className='text-deepGreen text-xl' />
+              <p className='text-sm '>Account</p>
+            </div>
+            {hover && (
+              <ul className='bg-white shadow-lg text-sm  absolute bottom-[-70px] w-full'>
+                {list.map(x => {
+                  return (
+                    <Link href='#' passHref>
+                      <li className='hover:bg-deepGreen px-3 py-[6px]'>{x}</li>
+                    </Link>
+                  )
+                })}
+              </ul>
+            )}
+          </div> */}
+        </div>
       </nav>
     </header>
   )

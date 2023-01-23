@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import Dashboard from '../Components/Dashboard/Dashboard'
+import Layout from '../Components/Layout'
 
 const DashboardPage = () => {
   return (
@@ -6,7 +8,9 @@ const DashboardPage = () => {
       <Head>
         <title>Dashboard - Tony Michael</title>
       </Head>
-      <h1>created user Dashboard</h1>
+      <Layout>
+        <Dashboard />
+      </Layout>
     </div>
   )
 }

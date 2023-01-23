@@ -2,12 +2,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { BsSearch, BsChevronDown } from 'react-icons/bs'
 import { GoLocation } from 'react-icons/go'
-import SearchBox from '../../Reusables/SearchBox'
+import SearchArea from '../../Reusables/SearchArea'
 
 const Hero = () => {
   return (
     <div
-      className={` md:bg-lightPurple h-[250px] sm:h-[320px] relative md:h-[470px] bg-cover md:bg-contain bg-no-repeat bg-right  md:bg-[url('/images/heroImage.png')] px-5 md:px-20 py-10 md:py-[60px] mb-10 `}
+      className={` md:bg-lightPurple h-[250px] sm:h-[320px] relative md:h-[420px] bg-cover md:bg-contain bg-no-repeat bg-right  md:bg-[url('/images/heroImage.png')] px-5 md:px-20 py-10 md:py-[60px] mb-10 `}
     >
       <Image
         src='/images/heroImage2.png'
@@ -29,15 +29,14 @@ const Hero = () => {
         </Link>
       </div>
 
-      <div className='md:hidden z-30'>
+      <div className='md:hidden z-30 flex flex-col items-center space-y-5'>
         <h2 className='text-xl  mt-3 font-Poppins text-center text-[deepGreen]'>
           Student shopping made easy
         </h2>
-      </div>
 
-      {/* search container */}
-      <div className='mt-[65px]'>
-        <SearchBox />
+        <div className='w-[300px]'>
+          <SearchArea />
+        </div>
       </div>
     </div>
   )

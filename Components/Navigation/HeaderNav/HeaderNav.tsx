@@ -5,6 +5,7 @@ import { useState } from 'react'
 import { NavLinks } from '../../../utils/staticData'
 import Link from 'next/link'
 import Image from 'next/image'
+import SearchArea from '../../../Reusables/SearchArea'
 
 const HeaderNav = () => {
   const [show, setShow] = useState(false)
@@ -121,7 +122,11 @@ const HeaderNav = () => {
             />
           </div>
         </Link>
-        <ul className='flex'>
+
+        <div className='w-[420px]'>
+          <SearchArea />
+        </div>
+        {/* <ul className='flex'>
           {NavLinks.map((link, index) => {
             return (
               <Link href={link.href} key={index}>
@@ -129,7 +134,7 @@ const HeaderNav = () => {
               </Link>
             )
           })}
-        </ul>
+        </ul> */}
         <Link href={'/postAd'} passHref>
           <button className='orange-btn border-none outline-none ease-in-out shadow-md duration-300 hover:scale-105'>
             Sell Now

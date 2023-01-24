@@ -1,4 +1,5 @@
 import InputText from '../../Reusables/InputText'
+import SubmitButton from '../../Reusables/SubmitButton'
 
 const PersonalDetails = () => {
   return (
@@ -24,12 +25,7 @@ const PersonalDetails = () => {
         />
         <InputText type='email' placeholder='Phone number i.e 09019404392' />
 
-        <button
-          type='button'
-          className='bg-orange py-2 uppercase font-semibold text-white mt-3'
-        >
-          Submit
-        </button>
+        <SubmitButton text=' Update Profile' />
       </form>
     </div>
   )

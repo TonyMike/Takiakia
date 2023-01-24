@@ -12,7 +12,9 @@ const Register: NextPage = () => {
       </Head>
       <Layout>
         <div className='py-10 md:py-28 flex items-center flex-col justify-center'>
-          <h1 className='mb-8 text-3xl md:text-4xl font-semibold'>Create an Account</h1>
+          <h1 className='mb-8 text-3xl md:text-4xl font-semibold'>
+            Create an Account
+          </h1>
           <form className='w-[350px] flex flex-col space-y-6'>
             {/*full name  */}
             <div className='flex space-x-2'>
@@ -33,8 +35,8 @@ const Register: NextPage = () => {
             </button>
           </form>
 
-          <p className='mt-3'>
-            Already have an account? &nbsp;
+          <p className='mt-3 flex space-x-2'>
+            <span> Already have an account?</span>
             <Link href='/login' className='text-orange'>
               Sign in
             </Link>

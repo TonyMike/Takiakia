@@ -39,8 +39,8 @@ const Login: NextPage = () => {
             </button>
           </form>
 
-          <p className='mt-3'>
-            Don't have an account? &nbsp;
+          <p className='mt-3 flex space-x-2'>
+            <span>Don't have an account?</span>
             <Link href='/register' className='text-orange'>
               Register Now
             </Link>

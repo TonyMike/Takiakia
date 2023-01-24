@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import Dashboard from '../Components/Dashboard/Dashboard'
-import Layout from '../Components/Layout'
+import Dashboard from '../../Components/Dashboard/Dashboard'
+import Layout from '../../Components/Layout'
 
 const DashboardPage = () => {
   return (

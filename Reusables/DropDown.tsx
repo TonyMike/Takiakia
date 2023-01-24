@@ -33,7 +33,9 @@ export default function DropDown ({ title, icon, links }: props) {
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
         sx={{
-          color: 'black'
+          color: 'black',
+          textTransform: 'capitalize',
+          fontSize:17
         }}
       >
         <div className='flex rounded-lg items-center space-x-2'>
@@ -53,7 +55,7 @@ export default function DropDown ({ title, icon, links }: props) {
         {links?.map(link => {
           return (
             <Link key={link.link} href={link.href} passHref>
-              <MenuItem onClick={handleClose}>{link.link}</MenuItem>
+              <MenuItem onClick={handleClose} className='hover:bg-lightGreen'>{link.link}</MenuItem>
             </Link>
           )
         })}

@@ -1,18 +1,18 @@
 import { RiMenu3Fill } from 'react-icons/ri'
 import { CgClose } from 'react-icons/cg'
 import { motion } from 'framer-motion'
-import { useRef, useState } from 'react'
+import { useState } from 'react'
 import { NavLinks } from '../../../utils/staticData'
 import Link from 'next/link'
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 import SearchArea from '../../../Reusables/SearchArea'
 import { BsPersonFill } from 'react-icons/bs'
 import DropDown from '../../../Reusables/DropDown'
-// import { IoPersonOutline } from 'react-icons/io'
 
 const HeaderNav = () => {
+  const [loggedIn, setLoggedIn] = useState(true)
+
   const [show, setShow] = useState(false)
-  const [hover, setHover] = useState(false)
 
   const open = () => {
     setShow(prev => (prev = true))
@@ -28,6 +28,29 @@ const HeaderNav = () => {
     {
       link: 'Register',
       href: '/register'
+    }
+  ]
+
+  const profileLinks = [
+    {
+      link: 'My Adverts',
+      href: '/dashboard/adverts'
+    },
+    {
+      link: 'Notifications',
+      href: '/dashboard/notifications'
+    },
+    {
+      link: 'Change Password',
+      href: '/dashboard/change-password'
+    },
+    {
+      link: 'Settings',
+      href: '/dashboard/settings'
+    },
+    {
+      link: 'Log out',
+      href: '/logout'
     }
   ]
   // console.log(hover)
@@ -50,11 +73,14 @@ const HeaderNav = () => {
 
         <div className='flex items-center space-x-3'>
           <Link href={'/postAd'} passHref>
-            <button className='text-[12px] outline-none border-orange border-[1px] rounded-[25px] px-3 py-2 text-orange'>
+            <button
+              type='button'
+              className='text-[12px] outline-none border-orange border-[1px] rounded-[25px] px-3 py-2 text-orange'
+            >
               Sell Now
             </button>
           </Link>
-          <button>
+          <button type='button'>
             {show ? (
               <motion.div
                 initial={{
@@ -144,36 +170,27 @@ const HeaderNav = () => {
 
         <div className='flex  items-center space-x-3'>
           <Link href={'/postAd'} passHref>
-            <button className='orange-btn border-none outline-none ease-in-out shadow-md duration-300 hover:scale-105'>
+            <button
+              type='button'
+              className='orange-btn border-none outline-none ease-in-out shadow-md duration-300 hover:scale-105'
+            >
               Sell Now
             </button>
           </Link>
-          <DropDown
-            title={'Account'}
-            icon={<BsPersonFill className='text-deepGreen text-xl' />}
-            links={links}
-          />
-          {/* <div
-            className=' cursor-pointer relative w-40 '
-            onMouseEnter={() => setHover(true)}
-            // onMouseLeave={() => setHover(false)}
-          >
-            <div className='flex rounded-lg items-center space-x-2'>
-              <BsPersonFill className='text-deepGreen text-xl' />
-              <p className='text-sm '>Account</p>
-            </div>
-            {hover && (
-              <ul className='bg-white shadow-lg text-sm  absolute bottom-[-70px] w-full'>
-                {list.map(x => {
-                  return (
-                    <Link href='#' passHref>
-                      <li className='hover:bg-deepGreen px-3 py-[6px]'>{x}</li>
-                    </Link>
-                  )
-                })}
-              </ul>
-            )}
-          </div> */}
+          {loggedIn ? (
+            <DropDown
+              title={'Profile'}
+              icon={<BsPersonFill className='text-deepGreen text-xl' />}
+              links={profileLinks}
+            />
+          ) : (
+            <DropDown
+              title={'Account'}
+              icon={<BsPersonFill className='text-deepGreen text-xl' />}
+              links={links}
+            />
+          )}
+
         </div>
       </nav>
     </header>

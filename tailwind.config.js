@@ -17,7 +17,7 @@ module.exports = {
       offBlue: '#151875',
       offNavyBlue: '#3f509e',
       pantonePurple: '#fbfafe',
-      lightPurple: '#f2f0ff',
+      lightGreen: '#F0F6F7;',
       purple: '#7e33e0',
       offPurple: '#9563b5',
       deepGreen: '#018995',

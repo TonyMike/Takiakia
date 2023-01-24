@@ -32,7 +32,7 @@ const HeaderNav = () => {
   ]
   // console.log(hover)
   return (
-    <header className=' sticky top-0 bg-white md:bg-lightPurple shadow-md md:shadow-none z-10'>
+    <header className=' sticky top-0 bg-white md:bg-lightGreen shadow-md md:shadow-none z-10'>
       {show ? (
         <div className='h-screen absolute w-full bg-none top-[67px] '></div>
       ) : null}

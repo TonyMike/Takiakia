@@ -7,7 +7,7 @@ import SearchArea from '../../Reusables/SearchArea'
 const Hero = () => {
   return (
     <div
-      className={` md:bg-lightPurple h-[250px] sm:h-[320px] relative md:h-[420px] bg-cover md:bg-contain bg-no-repeat bg-right  md:bg-[url('/images/heroImage.png')] px-5 md:px-20 py-10 md:py-[60px] mb-10 `}
+      className={` md:bg-lightGreen h-[250px] sm:h-[320px] relative md:h-[420px] bg-cover md:bg-contain bg-no-repeat bg-right  md:bg-[url('/images/heroImage.png')] px-5 md:px-20 py-10 md:py-[60px] mb-10 `}
     >
       <Image
         src='/images/heroImage2.png'

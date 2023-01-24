@@ -1,6 +1,6 @@
 const SafetyTips = () => {
   return (
-    <div className='shadow-md bg-lightPurple  p-4'>
+    <div className='shadow-md bg-lightGreen  p-4'>
       <h3 className='text-center mb-2 font-semibold'>Safety Tips</h3>
       <ul className='list-disc text-sm text-darkGrey ml-5 [&>li]:my-[6px] '>
         <li> Meet the seller at a safe public place</li>

@@ -34,7 +34,7 @@ const Register: NextPage = () => {
           </form>
 
           <p className='mt-3'>
-            Already have an account?{' '}
+            Already have an account? &nbsp;
             <Link href='/login' className='text-orange'>
               Sign in
             </Link>

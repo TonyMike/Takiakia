@@ -40,7 +40,7 @@ const Login: NextPage = () => {
           </form>
 
           <p className='mt-3'>
-            Don't have an account?{' '}
+            Don't have an account? &nbsp;
             <Link href='/register' className='text-orange'>
               Register Now
             </Link>

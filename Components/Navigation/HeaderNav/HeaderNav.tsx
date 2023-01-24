@@ -33,17 +33,17 @@ const HeaderNav = () => {
 
   const profileLinks = [
     {
-      link: 'My Adverts',
-      href: '/dashboard/adverts'
+      link: 'Dashboard',
+      href: '/dashboard'
     },
     {
       link: 'Notifications',
       href: '/dashboard/notifications'
     },
-    {
-      link: 'Change Password',
-      href: '/dashboard/change-password'
-    },
+    // {
+    //   link: 'Change Password',
+    //   href: '/dashboard/change-password'
+    // },
     {
       link: 'Settings',
       href: '/dashboard/settings'

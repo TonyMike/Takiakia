@@ -11,6 +11,10 @@ import ProductList from '../Components/ProductList/ProductList'
 import UseScrollPosition from '../Hooks/UseScrollPosition'
 
 const Home = ({ data }: { data: any }) => {
+  let newData
+  useEffect(() => {
+    newData = data
+  }, [newData])
   // console.log(data)
   const { scrollPosition } = UseScrollPosition()
   // const [loading, setLoading] = useState(true)
@@ -65,11 +69,15 @@ export async function getStaticProps () {
     `https://takiakia-backend.onrender.com/api/products?populate=*`
   )
     .then(response => response.json())
-    .then(response => response)
+    .then(response => response.data)
+    .catch(err => {
+      console.log(err)
+      return null
+    })
 
   return {
     props: {
-      data: call.data
+      data: call
     }
   }
   // try {

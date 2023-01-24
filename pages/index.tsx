@@ -11,6 +11,7 @@ import ProductList from '../Components/ProductList/ProductList'
 import UseScrollPosition from '../Hooks/UseScrollPosition'
 
 const Home = ({ data }: { data: any }) => {
+  // console.log(data)
   const { scrollPosition } = UseScrollPosition()
   // const [loading, setLoading] = useState(true)
   // const route = useRouter()
@@ -46,6 +47,7 @@ const Home = ({ data }: { data: any }) => {
             </h3>
 
             {/* {CheckData()} */}
+            <ProductList products={data} />
           </div>
         </main>
         <BlogSection />
@@ -58,19 +60,30 @@ const Home = ({ data }: { data: any }) => {
 export default Home
 
 export async function getStaticProps () {
-  try {
-    const url = process.env.ALL_PRODUCT
-    const data = await axios.get(`${url}`)
-    return {
-      props: {
-        data
-      },
-      revalidate: 5
+  const url = process.env.ALL_PRODUCT
+  const call = await fetch(
+    `https://takiakia-backend.onrender.com/api/products?populate=*`
+  )
+    .then(response => response.json())
+    .then(response => response)
+
+  return {
+    props: {
+      data: call.data
     }
-  } catch (err) {
-    return {
-      notFound: true
-    }
-    console.log(err)
   }
+  // try {
+  //   const url = process.env.ALL_PRODUCT
+  //   const data = await axios.get(`${url}`)
+  //   return {
+  //     props: {
+  //       data
+  //     },
+  //     revalidate: 5
+  //   }
+  // } catch (err) {
+  //   return {
+  //     notFound: true
+  //   }
+  // }
 }

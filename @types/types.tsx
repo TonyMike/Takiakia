@@ -4,6 +4,7 @@ export type linksType = {
 }
 export type inputProps = {
   placeholder?: string
+  type?: string
 }
 export type nairaProps = {
   fontSize: string

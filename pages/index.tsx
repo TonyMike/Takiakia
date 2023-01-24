@@ -2,6 +2,7 @@ import axios from 'axios'
 import { NextPage } from 'next'
 import Head from 'next/head'
 import { Router, useRouter } from 'next/router'
+import { useEffect, useState } from 'react'
 import BlogSection from '../Components/BlogSection/BlogSection'
 import Category from '../Components/Category/Category'
 import Hero from '../Components/Hero/Hero'
@@ -11,12 +12,18 @@ import UseScrollPosition from '../Hooks/UseScrollPosition'
 
 const Home = ({ data }: { data: any }) => {
   const { scrollPosition } = UseScrollPosition()
+  // const [loading, setLoading] = useState(true)
   // const route = useRouter()
   // if (route.isReady == false) {
   //   return <h1>loading</h1>
   // }
-  // console.log(data)
-
+  // const CheckData = () => {
+  //   if (data == null) {
+  //     return <h1>no data</h1>
+  //   } else {
+  //     return data
+  //   }
+  // }
   return (
     <>
       <Head>
@@ -38,7 +45,7 @@ const Home = ({ data }: { data: any }) => {
               Lastest Sells
             </h3>
 
-            <ProductList products={data} />
+            {/* {CheckData()} */}
           </div>
         </main>
         <BlogSection />
@@ -51,13 +58,19 @@ const Home = ({ data }: { data: any }) => {
 export default Home
 
 export async function getStaticProps () {
-  const url = process.env.ALL_PRODUCT
-  const res = await axios.get(`${url}`)
-  const data = res.data.data
-  return {
-    props: {
-      data
-    },
-    revalidate: 5
+  try {
+    const url = process.env.ALL_PRODUCT
+    const data = await axios.get(`${url}`)
+    return {
+      props: {
+        data
+      },
+      revalidate: 5
+    }
+  } catch (err) {
+    return {
+      notFound: true
+    }
+    console.log(err)
   }
 }

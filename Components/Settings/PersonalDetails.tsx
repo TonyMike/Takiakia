@@ -24,6 +24,10 @@ const PersonalDetails = () => {
           placeholder='Instagram i.e https://instagram.com/johnsmith'
         />
         <InputText type='email' placeholder='Phone number i.e 09019404392' />
+        <div className='flex space-x-4'>
+          <InputText placeholder='WhatsApp i.e https://wa.me/+2348129384732' />
+          <InputText placeholder='Twitter i.e https://twitter.com/johnsmith' />
+        </div>
 
         <SubmitButton text=' Update Profile' />
       </form>

@@ -15,7 +15,7 @@ const Settings: NextPage = () => {
         <DashboardHero header={'Settings'} />
         <div className='flex max-h-[400px] justify-center items-center '>
           <div className='px-2  w-[400px]  md:w-[600px] m-auto py-4 '>
-            <ul className='flex w-full text-center my-2 '>
+            <ul className='flex w-full text-center my-2 shadow-md'>
               <li
                 onClick={() => setActive(prev => (prev = 0))}
                 className={` ${

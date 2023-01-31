@@ -169,7 +169,7 @@ const HeaderNav = () => {
         </div>
 
         <div className='flex  items-center space-x-3'>
-          <Link href={'/postAd'} passHref>
+          <Link href={'/dashboard/postAd'} passHref>
             <button
               type='button'
               className='orange-btn border-none outline-none ease-in-out shadow-md duration-300 hover:scale-105'

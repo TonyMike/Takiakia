@@ -84,7 +84,7 @@ export const States: StateProps[] = [
   'Edo',
   'Ekiti',
   'Enugu',
-  'FCT - Abuja',
+  'Federal Capitory Territory  - Abuja',
   'Gombe',
   'Imo',
   'Jigawa',

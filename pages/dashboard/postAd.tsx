@@ -62,8 +62,9 @@ const PostAd: NextPage = () => {
     <Layout>
       <DashboardHero header='Post Advert' />
       <form>
-        <Box sx={{ width: '100%', margin: 'auto' }} className='p-3'>
-          <Stepper activeStep={activeStep}>
+        <div className='p-3 w-full m-auto bg-red sm:bg-blue'>
+          fkdnk
+          {/* <Stepper activeStep={activeStep}>
             {steps.map((label, index) => {
               const stepProps: { completed?: boolean } = {}
               const labelProps: {
@@ -115,8 +116,8 @@ const PostAd: NextPage = () => {
                 </Button>
               </Box>
             </React.Fragment>
-          )}
-        </Box>
+          )} */}
+        </div>
       </form>
     </Layout>
   )

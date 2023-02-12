@@ -8,7 +8,7 @@ import DashboardHero from '../../Reusables/DashboardHero'
 
 const Settings: NextPage = () => {
   const [active, setActive] = useState(0)
-  const display = [<PersonalDetails />, <ChangePassword />]
+  const display = [<PersonalDetails key={'personal-details'} />, <ChangePassword  key={'change-password'}/>]
   return (
     <div>
       <Layout>

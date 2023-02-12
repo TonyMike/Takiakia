@@ -73,7 +73,7 @@ const PostAd: NextPage = () => {
               px: {
                 xs: '0.75rem',
                 sm: '2rem',
-                lg: '15rem'
+                lg: '23rem'
               }
             }}
             className=' w-full  py-4  m-auto'

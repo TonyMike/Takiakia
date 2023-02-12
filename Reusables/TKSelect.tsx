@@ -27,17 +27,19 @@ const TKSelect = ({
   )
 
   return (
-    <div className='font-medium w-full relative'>
+    <div className='text-sm w-full relative'>
       <div
         tabIndex={0}
         onClick={() => setShow(prev => !prev)}
-        className='bg-white w-[inherit]  p-2 cursor-pointer focus-within:border-deepGreen border-2 border-grey flex justify-between items-center rounded'
+        className='bg-white w-[inherit]  p-2 cursor-pointer border-[1px] border-[#A4B6C8] focus-within:ring-deepGreen
+        focus:outline-none focus:ring-2 focus:ring-deepGreen focus:border-transparent
+        flex justify-between items-center rounded'
       >
         <span className='capitalize text-ellipsis w-full'>
           {selected ? (
             <span className='h-full text-ellipsis w-full'>{selected}</span>
           ) : (
-            <span className='text-darkGrey'>{placeholder}</span>
+            <span className='text-grey'>{placeholder}</span>
           )}
         </span>
         <BiChevronDown size={20} />
@@ -68,7 +70,7 @@ const TKSelect = ({
                   setShow(false)
                 }}
                 key={index}
-                className={`p-2 hover:bg-deepGreen  bg-white cursor-pointer hover:text-white`}
+                className={`p-2 hover:bg-deepGreen capitalize  bg-white cursor-pointer hover:text-white`}
               >
                 {item}
               </li>
@@ -76,7 +78,6 @@ const TKSelect = ({
           })}
         </ul>
       ) : null}
-      
     </div>
   )
 }

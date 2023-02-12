@@ -1,4 +1,4 @@
-import { linksType, nairaProps, StateProps } from '../@types/types'
+import { linksType, StringProps } from '../@types/types'
 
 export const SupportLinks: linksType[] = [
   {
@@ -69,7 +69,7 @@ export const NairaIcon = () => {
   return <span>₦</span>
 }
 
-export const States: StateProps[] = [
+export const States: StringProps[] = [
   'Abia',
   'Adamawa',
   'Akwa Ibom',
@@ -107,4 +107,9 @@ export const States: StateProps[] = [
   'Taraba',
   'Yobe',
   'Zamfara'
+]
+
+export const Conditions: StringProps[] =[
+  'new',
+  'old'
 ]

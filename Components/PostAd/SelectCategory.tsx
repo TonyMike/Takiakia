@@ -16,6 +16,7 @@ const SelectCategory = () => {
   }
   return (
     <div>
+      <h1 className='text-xl text-center md:hidden font-bold mb-5 '>Step 1: Category and Images</h1>
       <div className='grid grid-cols-2 gap-2 md:gap-4 lg:gap-6'>
         <TKSelect
           placeholder='Category'
@@ -69,6 +70,12 @@ const SelectCategory = () => {
               />
             </div>
           ))}
+      </div>
+      <div>
+        <p className='text-sm'>
+          Each picture must not exceed 5 mb. <br/> Supported format are * jpg, jpeg, webp and *
+          png
+        </p>
       </div>
     </div>
   )

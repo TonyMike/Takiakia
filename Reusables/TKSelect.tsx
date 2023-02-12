@@ -33,13 +33,9 @@ const TKSelect = ({
         onClick={() => setShow(prev => !prev)}
         className='bg-white w-[inherit]  p-2 cursor-pointer focus-within:border-deepGreen border-2 border-grey flex justify-between items-center rounded'
       >
-        <span className='capitalize text-ellipsis'>
+        <span className='capitalize text-ellipsis w-full'>
           {selected ? (
-            selected.length > 25 ? (
-              selected.substring(0, 25) + '...'
-            ) : (
-              selected
-            )
+            <span className='h-full text-ellipsis w-full'>{selected}</span>
           ) : (
             <span className='text-darkGrey'>{placeholder}</span>
           )}
@@ -49,7 +45,7 @@ const TKSelect = ({
       {show ? (
         <ul
           tabIndex={1}
-          className='mt-2 bg-white absolute w-full shadow-md max-h-60 overflow-y-scroll overflow-x-hidden'
+          className=' bg-white absolute w-full shadow-md max-h-60 overflow-y-scroll overflow-x-hidden'
         >
           {requireSearch ? (
             <li className='flex px-2 items-center sticky top-0 bg-white'>
@@ -80,6 +76,7 @@ const TKSelect = ({
           })}
         </ul>
       ) : null}
+      
     </div>
   )
 }

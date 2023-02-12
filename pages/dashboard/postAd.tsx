@@ -16,9 +16,8 @@ type comProps = any[]
 const steps = ['Category & Images', 'Ad Details']
 const PostAd: NextPage = () => {
   const formComponent: comProps = [
-    <SelectCategory />,
-    <AboutProduct />
-    // <AboutProduct />
+    <SelectCategory key={'select-category'} />,
+    <AboutProduct key={'about-product'} />
   ]
   const [activeStep, setActiveStep] = React.useState(0)
   const [skipped, setSkipped] = React.useState(new Set<number>())
@@ -86,7 +85,6 @@ const PostAd: NextPage = () => {
                   const labelProps: {
                     optional?: React.ReactNode
                   } = {}
-
 
                   return (
                     <Step key={label} {...stepProps}>

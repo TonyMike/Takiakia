@@ -15,8 +15,8 @@ const Login: NextPage = () => {
       </Head>
       <Layout>
         <div className='py-10 md:py-28 flex items-center flex-col justify-center'>
-          <h1 className='mb-5 text-3xl md:text-4xl font-semibold'>Welcome back</h1>
-          <form className='w-80 flex flex-col space-y-6'>
+          <h1 className='mb-8 text-3xl md:text-4xl font-semibold'>Welcome back</h1>
+          <form className='w-80 flex flex-col space-y-8'>
             <InputText placeholder='Email Address' />
             <InputText placeholder='Password' type='password' />
             <div className='flex justify-between items-center'>

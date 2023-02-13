@@ -5,6 +5,7 @@ import StepLabel from '@mui/material/StepLabel'
 import Stepper from '@mui/material/Stepper'
 import Typography from '@mui/material/Typography'
 import { NextPage } from 'next'
+import Link from 'next/link'
 import * as React from 'react'
 import Layout from '../../Components/Layout'
 import AboutProduct from '../../Components/PostAd/AboutProduct'
@@ -101,7 +102,9 @@ const PostAd: NextPage = () => {
                 </Typography>
                 <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
                   <Box sx={{ flex: '1 1 auto' }} />
-                  <Button onClick={handleReset}>Reset</Button>
+                  <Link href={'/dashboard'} passHref>
+                    <Button>Done</Button>
+                  </Link>
                 </Box>
               </React.Fragment>
             ) : (
@@ -119,8 +122,9 @@ const PostAd: NextPage = () => {
                   <Box sx={{ flex: '1 1 auto' }} />
 
                   <Button onClick={handleNext}>
-                    {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
+                    {activeStep === steps.length - 1 ? 'Submit' : 'Next'}
                   </Button>
+                  <Button onClick={handleReset}>Reset</Button>
                 </Box>
               </React.Fragment>
             )}

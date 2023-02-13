@@ -2,84 +2,91 @@ export const mobilePhone = [
   {
     type: 'select',
     placeholder: 'brand',
-    list: []
+    list: [],
+    enableSearch: true
   },
   {
     type: 'select',
     placeholder: 'model',
-    list: []
+    list: [],
+    enableSearch: true
   },
   {
     type: 'select',
     placeholder: 'RAM',
-    list: []
+    list: [],
+    enableSearch: false
   },
   {
     type: 'select',
     placeholder: 'Internal storage',
-    list: []
+    list: [],
+    enableSearch: false
   },
   {
     type: 'select',
     placeholder: 'Screen Size',
-    list: []
+    list: [],
+    enableSearch: false
   },
   {
     type: 'select',
     placeholder: 'color',
-    list: []
+    list: [],
+    enableSearch: true
   },
   {
     type: 'select',
     placeholder: 'Operating System',
-    list: []
+    list: [],
+    enableSearch: false
   },
   {
     type: 'select',
     placeholder: 'Display Type',
-    list: []
-  },
-  {
-    type: 'select',
-    placeholder: 'brand',
-    list: []
+    list: [],
+    enableSearch: false
   },
   {
     type: 'select',
     placeholder: 'Resolution',
-    list: []
+    list: [],
+    enableSearch: false
   },
   {
     type: 'select',
     placeholder: 'sim',
-    list: []
+    list: ['Single', 'Dual'],
+    enableSearch: false
   },
   {
     type: 'select',
     placeholder: 'card slot',
-    list: []
+    list: ['available', 'not available'],
+    enableSearch: false
   },
   {
     type: 'select',
     placeholder: 'main camera',
-    list: []
+    list: [],
+    enableSearch: false
   },
   {
     type: 'select',
     placeholder: 'selfie camera',
-    list: []
+    list: [],
+    enableSearch: false
   },
   {
     type: 'select',
     placeholder: 'battery (mAh)',
-    list: []
+    list: [],
+    enableSearch: false
   },
   {
     type: 'select',
-    placeholder: 'exchange',
-    list: [
-      'yes',
-      'no',
-    ]
+    placeholder: 'exchangable',
+    list: ['yes', 'no'],
+    enableSearch: false
   }
 ]

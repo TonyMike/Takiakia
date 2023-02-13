@@ -1,8 +1,4 @@
-import axios from 'axios'
-import { NextPage } from 'next'
 import Head from 'next/head'
-import { Router, useRouter } from 'next/router'
-import { useEffect, useState } from 'react'
 import BlogSection from '../Components/BlogSection/BlogSection'
 import Category from '../Components/Category/Category'
 import Hero from '../Components/Hero/Hero'
@@ -11,10 +7,6 @@ import ProductList from '../Components/ProductList/ProductList'
 import UseScrollPosition from '../Hooks/UseScrollPosition'
 
 const Home = ({ data }: { data: any }) => {
-  let newData
-  useEffect(() => {
-    newData = data
-  }, [newData])
   // console.log(data)
   const { scrollPosition } = UseScrollPosition()
   // const [loading, setLoading] = useState(true)

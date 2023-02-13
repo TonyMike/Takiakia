@@ -12,7 +12,7 @@ const Register: NextPage = () => {
       </Head>
       <Layout>
         <div className='py-10 md:py-28 flex items-center flex-col justify-center'>
-          <h1 className='mb-8 text-3xl md:text-4xl font-semibold'>
+          <h1 className='mb-10 text-3xl md:text-4xl font-semibold'>
             Create an Account
           </h1>
           <form className='w-[350px] flex flex-col space-y-6'>

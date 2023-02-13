@@ -16,17 +16,16 @@ const SelectCategory = () => {
   }
   return (
     <div>
-      <h1 className='text-xl text-center md:hidden font-bold mb-5 '>Step 1: Category and Images</h1>
+      <h1 className='text-xl text-center md:hidden font-bold mb-9 '>Step 1: Category and Images</h1>
       <div className='grid grid-cols-2 gap-2 md:gap-4 lg:gap-6'>
         <TKSelect
           placeholder='Category'
-          requireSearch={true}
-          searchPlaceholder='Search'
+          enableSearch={true}
           arrList={States}
         />
         <TKSelect
-          placeholder='Category'
-          requireSearch={true}
+          placeholder='Subcategory'
+          enableSearch={true}
           searchPlaceholder='Search for a category'
           arrList={States}
         />

@@ -3,8 +3,8 @@ import SubmitButton from '../../Reusables/SubmitButton'
 
 const ChangePassword = () => {
   return (
-    <div>
-      <form className='flex flex-col space-y-4'>
+    <div className=''>
+      <form className='flex flex-col space-y-6 '>
         <InputText placeholder='Enter old password' />
         <InputText placeholder='Enter new password' />
         <InputText placeholder='Confirm new password' />

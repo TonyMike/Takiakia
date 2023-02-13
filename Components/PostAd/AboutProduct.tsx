@@ -8,12 +8,12 @@ import MobileCategorySelection from './MobileCategorySelection'
 const AboutProduct = () => {
   const [checkState, setCheckState] = useState(false)
   return (
-    <div>
-      <h1 className='text-xl text-center md:hidden font-bold mb-5 '>
+    <div  className='mt-10'>
+      <h1 className='text-xl text-center md:hidden font-bold mb-10'>
         Step 2: About Product
       </h1>
-      <div className='grid md:grid-cols-2 gap-4 my-5'>
-        <InputText placeholder='Title i.e Iphone 11 pro max 64gb' />
+      <div className='grid md:grid-cols-2 gap-4 my-7'>
+        <InputText placeholder='Title' required={true} />
       </div>
 
       {/* if the category is mobile */}
@@ -23,8 +23,8 @@ const AboutProduct = () => {
         <TextArea placeholder='Description*' />
       </div>
       <div className='grid grid-cols-2  gap-4 my-5'>
-        <InputText placeholder='Price 20,0000' />
-        <TKSelect placeholder={'Condition'} arrList={Conditions} />
+        <InputText placeholder='Price' />
+        <TKSelect placeholder={'Condition'} arrList={Conditions} enableSearch={false} />
       </div>
       <p className='flex space-x-2 ml-5'>
         <input

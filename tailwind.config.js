@@ -23,7 +23,8 @@ module.exports = {
       deepGreen: '#018995',
       white: '#ffffff',
       grey: '#9295AA',
-      darkGrey: '#000000b3'
+      darkGrey: '#000000b3',
+      transparent: 'hsla(0, 0%, 0%, 0)'
     },
     screens: {
       sm: '640px',

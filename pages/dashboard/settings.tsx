@@ -38,7 +38,7 @@ const Settings: NextPage = () => {
                 Change password
               </li>
             </ul>
-            <div className='mt-5'>{display[active]}</div>
+            <div className='mt-8'>{display[active]}</div>
           </div>
         </div>
       </Layout>

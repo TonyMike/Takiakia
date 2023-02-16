@@ -5,6 +5,7 @@ import StepLabel from '@mui/material/StepLabel'
 import Stepper from '@mui/material/Stepper'
 import Typography from '@mui/material/Typography'
 import { NextPage } from 'next'
+import Head from 'next/head'
 import Link from 'next/link'
 import * as React from 'react'
 import Layout from '../../Components/Layout'
@@ -65,7 +66,9 @@ const PostAd: NextPage = () => {
 
   return (
     <div>
-      <title>Dashboard - Post Ad</title>
+      <Head>
+        <title>Dashboard - Post Ad</title>
+      </Head>
       <Layout>
         <DashboardHero header='Post Advert' />
         <form>

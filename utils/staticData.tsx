@@ -109,8 +109,4 @@ export const States: StringProps[] = [
   'Zamfara'
 ]
 
-
-export const Conditions: StringProps[] =[
-  'new',
-  'old'
-]
+export const Conditions: StringProps[] = ['new', 'old']

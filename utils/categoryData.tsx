@@ -1,4 +1,6 @@
-export const mobilePhone = [
+import { categoryProps } from '../@types/types'
+
+export const mobilePhone: categoryProps[] = [
   {
     type: 'select',
     placeholder: 'brand',
@@ -88,5 +90,38 @@ export const mobilePhone = [
     placeholder: 'exchangable',
     list: ['yes', 'no'],
     enableSearch: false
+  }
+]
+
+export const smartWatchANDTrackers = [
+  {
+    type: 'select',
+    placeholder: 'brand',
+    list: [],
+    enableSearch: true
+  },
+  {
+    type: 'select',
+    placeholder: 'brand',
+    list: [],
+    enableSearch: true
+  },
+  {
+    type: 'select',
+    placeholder: 'brand',
+    list: [],
+    enableSearch: true
+  },
+  {
+    type: 'select',
+    placeholder: 'brand',
+    list: [],
+    enableSearch: true
+  },
+  {
+    type: 'select',
+    placeholder: 'brand',
+    list: [],
+    enableSearch: true
   }
 ]

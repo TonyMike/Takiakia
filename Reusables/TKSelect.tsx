@@ -17,7 +17,7 @@ const TKSelect = ({
 
   const filteredItems = useMemo(
     () =>
-      arrList.filter(item =>
+      arrList?.filter(item =>
         item.toLowerCase().includes(searchInput.toLowerCase())
       ),
 
@@ -89,7 +89,7 @@ const TKSelect = ({
         } bg-white z-10 mt-1 absolute w-full shadow-md max-h-60 overflow-y-scroll overflow-x-hidden`}
       >
         {enableSearch
-          ? filteredItems.map((item, index) => {
+          ? filteredItems?.map((item, index) => {
               return (
                 <li
                   onClick={() => handleSelectedItem(item)}
@@ -100,7 +100,7 @@ const TKSelect = ({
                 </li>
               )
             })
-          : arrList.map((item, index) => {
+          : arrList?.map((item, index) => {
               return (
                 <li
                   onClick={() => handleSelectedItem(item)}

@@ -1,4 +1,9 @@
-
+export type categoryProps = {
+  type: string
+  placeholder: string
+  list?: string[] | number[] | undefined
+  enableSearch?: boolean
+}
 
 export type linksType = {
   title: string
@@ -7,13 +12,13 @@ export type linksType = {
 export type inputProps = {
   placeholder?: string
   type?: string
-  disable?: boolean,
+  disable?: boolean
   required?: boolean
 }
 export type SelectProps = {
   placeholder: string
   searchPlaceholder?: string
-  arrList: any[]
+  arrList?: any[]
   required?: boolean
   enableSearch?: boolean
 }
@@ -31,8 +36,8 @@ export type Location = {
   noLocation?: boolean
 }
 
-export  type productSelectionProps = {
-  type?:string
+export type productSelectionProps = {
+  type?: string
   placeholder?: string
   list?: StringProps[]
 }

@@ -1,11 +1,24 @@
 import { Box, Grid } from '@mui/material'
-import Image from 'next/image'
-import { useEffect, useRef, useState } from 'react'
-import { TfiMenuAlt } from 'react-icons/tfi'
+import Image from 'next/legacy/image'
+import { useRef, useState } from 'react'
 import UseScrollPosition from '../../Hooks/UseScrollPosition'
 
 const Category = () => {
   const { scrollPosition } = UseScrollPosition()
+  const [activeCategory, setActiveCategory] = useState('')
+
+  const active = true
+  const categoryClick = (e: any) => {
+    setActiveCategory(e.target.innerText)
+
+    if (activeCategory === e.target.innerText) {
+      setActiveCategory('')
+      // setActive(false)
+    }
+    console.log(activeCategory, 'activeCategory')
+    console.log(e.target.innerText, 'e.target.innerText')
+  }
+
   // const [scrollPosition, setScrollPosition] = useState(0)
 
   // useEffect(() => {
@@ -25,8 +38,8 @@ const Category = () => {
   //   top: scrollPosition > 200 ? '0' : ''
   // }
 
-  const divRef = useRef(null)
-  const div = divRef.current
+  const categoryRef = useRef(null)
+  //@ts-ignore
 
   const categories = [
     { name: 'Phones & Tablets', icon: '/icons/smartphone.png' },
@@ -44,12 +57,12 @@ const Category = () => {
   ]
 
   return (
-    <div className=' md:shadow-md '>
+    <div className='  '>
       {/* <div className='fixed left-4 text4xl z-40 top-0'>
         The scroll position is {scrollPosition}
       </div> */}
       {/* mobile category */}
-      <div className=' md:hidden mb-4'>
+      <div className=' lg:hidden mb-4'>
         <Grid container rowGap={0.7} justifyContent='center' columnGap={0.7}>
           {categories.map((category, index) => {
             return (
@@ -58,20 +71,12 @@ const Category = () => {
                 item
                 xs={3.7}
                 sm={2.7}
-                // container
-                // direction='column'
                 justifyContent='center'
-                // alignItems='center'
-                className='bg-[#F7FAFE] py-3 px-2'
+                className='bg-[#F7FAFE] py-3 px-2 cursor-pointer shadow-sm'
               >
                 <div className='flex flex-col items-center space-y-2 '>
                   <div className='w-[35px] h-[35px] relative'>
-                    <Image
-                      src={category.icon}
-                      layout='fill'
-                      // className='mb-2 '
-                      alt='icon'
-                    />
+                    <Image src={category.icon} layout='fill' alt='icon' />
                   </div>
 
                   <p className='text-[12px] sm:text-[13px]  text-navyBlue font-semibold text-center capitalize'>
@@ -85,42 +90,53 @@ const Category = () => {
       </div>
 
       {/* desktop categories */}
-      <Box className='hidden md:block'>
-        {/* <h3 className='flex pr-20  py-5 md:pl-5 lg:pl-6 items-center space-x-2'>
-          <span className='mb-1'>
-            <TfiMenuAlt />
-          </span>
-          <span className='text-[20px] '>Categories</span>
-        </h3> */}
-        {/* <ul className='absolute w-[400px] z-20 bg-red shadow-sm top-0 left-[235px] h-full'>
-          <li>cars</li>
-          <li>cars</li>
-          <li>cars</li>
-          <li>cars</li>
-          <li>cars</li>
-          <li>cars</li>
-          <li>cars</li>
-        </ul> */}
-
+      <Box className='hidden lg:block'>
         {/* category list */}
-        <ul className='' ref={divRef}>
-          {categories.map((category, index) => {
+        <ul className=''>
+          {categories.map(category => {
             return (
               <li
-                key={index}
-                className='capitalize w-[200px] md:w-[234px] py-2 md:pl-5 lg:pl-6 text-[15px] flex space-x-2 text-[#3d3d3d] hover:bg-orange hover:text-white transition-all ease-in-out duration-200 cursor-pointer hover:ease-in '
+                key={category.name}
+                className='w-full text-[15px]'
+                ref={categoryRef}
               >
-                <Image
-                  src={category.icon}
-                  width={20}
-                  height={20}
-                  alt='icon'
-                  style={{
-                    maxWidth: '100%',
-                    height: 'auto'
-                  }}
-                />
-                <span className='text-[13px]'>{category.name}</span>
+                <span
+                  onClick={e => categoryClick(e)}
+                  className={` ${
+                    active &&
+                    activeCategory.toLowerCase() === category.name.toLowerCase()
+                      ? ' bg-orange text-white'
+                      : ''
+                  }  flex space-x-2 capitalize relative  py-2 pl-4  ${
+                    !active ? 'text-[#3d3d3d]' : ''
+                  }  hover:bg-orange hover:text-white transition-all ease-in duration-150 cursor-pointer hover:ease-in  `}
+                >
+                  <div className='relative w-[20px] '>
+                    <Image src={category.icon} layout='fill' alt='icon' />
+                  </div>
+                  <span className='text-[13px]'>{category.name} </span>
+                </span>
+
+                <ul
+                  className={` ${
+                    activeCategory.toLowerCase() === category.name.toLowerCase()
+                      ? 'block'
+                      : 'hidden'
+                  }  `}
+                >
+                  {Array(4)
+                    .fill('one')
+                    .map(list => {
+                      return (
+                        <li
+                          key={list}
+                          className='hover:bg-deepGreen py-1 pl-10 capitalize  hover:text-white transition-all ease-in duration-150 cursor-pointer hover:ease-in '
+                        >
+                          {list}
+                        </li>
+                      )
+                    })}
+                </ul>
               </li>
             )
           })}

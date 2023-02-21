@@ -1,3 +1,4 @@
+import { Grid } from '@mui/material'
 import Head from 'next/head'
 import BlogSection from '../Components/BlogSection/BlogSection'
 import Category from '../Components/Category/Category'
@@ -28,23 +29,18 @@ const Home = ({ data }: { data: any }) => {
       </Head>
       <Layout>
         <Hero />
-        <main className='px-5 sm:px-5 md:px-10 lg:px-20 flex flex-col md:flex-row md:space-x-7'>
-          <div
-          // className={`${
-          //   scrollPosition >= 535 ? 'sticky top-[70px]' : 'relative'
-          // }`}
-          >
-            <Category />
-          </div>
-
-          <div className={` grow`}>
-            <h3 className='text-[25px] text-center  py-2 text-navyBlue'>
-              Lastest Sells
-            </h3>
-
-            {/* {CheckData()} */}
-            <ProductList products={data} />
-          </div>
+        <main className='px-5 sm:px-5 bg-white md:px-10 lg:px-20 '>
+          <Grid container justifyContent={'space-between'}>
+            <Grid item xs={12} lg={2.7}>
+              <Category />
+            </Grid>
+            <Grid item className='' xs={12} lg={9.2}>
+              <h3 className='text-[25px] text-center  py-2 text-navyBlue'>
+                Lastest Sells
+              </h3>
+              <ProductList products={data} />
+            </Grid>
+          </Grid>
         </main>
         <BlogSection />
       </Layout>
@@ -57,33 +53,20 @@ export default Home
 
 export async function getStaticProps () {
   const url = process.env.ALL_PRODUCT
-  const call = await fetch(
+  const data = await fetch(
     `https://takiakia-backend.onrender.com/api/products?populate=*`
   )
     .then(response => response.json())
     .then(response => response.data)
     .catch(err => {
-      console.log(err)
+      console.log('unable to fetch products')
       return null
     })
 
   return {
     props: {
-      data: call
-    }
+      data
+    },
+    revalidate: 10
   }
-  // try {
-  //   const url = process.env.ALL_PRODUCT
-  //   const data = await axios.get(`${url}`)
-  //   return {
-  //     props: {
-  //       data
-  //     },
-  //     revalidate: 5
-  //   }
-  // } catch (err) {
-  //   return {
-  //     notFound: true
-  //   }
-  // }
 }

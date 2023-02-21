@@ -40,10 +40,6 @@ const HeaderNav = () => {
       link: 'Notifications',
       href: '/dashboard/notifications'
     },
-    // {
-    //   link: 'Change Password',
-    //   href: '/dashboard/change-password'
-    // },
     {
       link: 'Settings',
       href: '/dashboard/settings'

@@ -56,7 +56,7 @@ const HeaderNav = () => {
         <div className='h-screen absolute w-full bg-none top-[67px] '></div>
       ) : null}
       {/* mobile header */}
-      <nav className='md:hidden flex justify-between items-center py-4 px-4 pr-2 sm:px-10 '>
+      <nav className='lg:hidden flex justify-between items-center py-4 px-4 pr-2 sm:px-10 '>
         <Link href={'/'} passHref>
           <div className='relative h-[40px] w-[120px] z-30 '>
             <Image
@@ -149,7 +149,7 @@ const HeaderNav = () => {
       </nav>
 
       {/* desktop header */}
-      <nav className='hidden md:flex justify-between items-center px-20 py-3'>
+      <nav className='hidden lg:flex justify-between items-center px-20 py-3'>
         <Link href={'/'} passHref>
           <div className='relative h-[40px] w-[150px] z-30 '>
             <Image
@@ -186,7 +186,6 @@ const HeaderNav = () => {
               links={links}
             />
           )}
-
         </div>
       </nav>
     </header>

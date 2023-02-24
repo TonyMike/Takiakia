@@ -1,13 +1,13 @@
-import { RiMenu3Fill } from 'react-icons/ri'
-import { CgClose } from 'react-icons/cg'
 import { motion } from 'framer-motion'
-import { useState } from 'react'
-import { NavLinks } from '../../../utils/staticData'
-import Link from 'next/link'
 import Image from 'next/legacy/image'
-import SearchArea from '../../../Reusables/SearchArea'
+import Link from 'next/link'
+import { useState } from 'react'
 import { BsPersonFill } from 'react-icons/bs'
+import { CgClose } from 'react-icons/cg'
+import { RiMenu3Fill } from 'react-icons/ri'
 import DropDown from '../../../Reusables/DropDown'
+import SearchArea from '../../../Reusables/SearchArea'
+import { NavLinks } from '../../../utils/staticData'
 
 const HeaderNav = () => {
   const [loggedIn, setLoggedIn] = useState(true)
@@ -51,12 +51,12 @@ const HeaderNav = () => {
   ]
   // console.log(hover)
   return (
-    <header className=' sticky top-0 bg-white md:bg-lightGreen shadow-md md:shadow-none z-10'>
+    <header className=' sticky top-0 bg-lightGreen md:bg-lightGreen shadow-md md:shadow-none z-10'>
       {show ? (
         <div className='h-screen absolute w-full bg-none top-[67px] '></div>
       ) : null}
       {/* mobile header */}
-      <nav className='lg:hidden flex justify-between items-center py-4 px-4 pr-2 sm:px-10 '>
+      <nav className='lg:hidden bg-lightGreen flex justify-between items-center py-4 px-4 pr-2 sm:px-10 '>
         <Link href={'/'} passHref>
           <div className='relative h-[40px] w-[120px] z-30 '>
             <Image
@@ -68,7 +68,7 @@ const HeaderNav = () => {
         </Link>
 
         <div className='flex items-center space-x-3'>
-          <Link href={'/postAd'} passHref>
+          <Link href={'/dashboard/postAd'} passHref>
             <button
               type='button'
               className='text-[12px] outline-none border-orange border-[1px] rounded-[25px] px-3 py-2 text-orange'

@@ -1,10 +1,3 @@
-export type categoryProps = {
-  type: string
-  placeholder: string
-  list?: string[] | number[] | undefined
-  enableSearch?: boolean
-}
-
 export type linksType = {
   title: string
   href: string

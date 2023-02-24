@@ -3,12 +3,13 @@ import InputText from '../../Reusables/InputText'
 import TextArea from '../../Reusables/TextArea'
 import TKSelect from '../../Reusables/TKSelect'
 import { Conditions } from '../../utils/staticData'
-import MobileCategorySelection from './MobileCategorySelection'
+import Accessories from './PhoneAndTablets/Accessories'
+import Tablets from './PhoneAndTablets/Tablets'
 
 const AboutProduct = () => {
   const [checkState, setCheckState] = useState(false)
   return (
-    <div  className='mt-10'>
+    <div className='mt-10'>
       <h1 className='text-xl text-center md:hidden font-bold mb-10'>
         Step 2: About Product
       </h1>
@@ -17,14 +18,26 @@ const AboutProduct = () => {
       </div>
 
       {/* if the category is mobile */}
-      <MobileCategorySelection />
+      {/* <MobilePhone /> */}
+
+      {/* if the category is smartwatches and trackers */}
+      {/* <SmartWatchANDTrackers /> */}
+
+      {/* <Tablets /> */}
+
+      <Accessories />
 
       <div className='w-full'>
         <TextArea placeholder='Description*' />
       </div>
-      <div className='grid grid-cols-2  gap-4 my-5'>
+      <div className='my-7' />
+      <div className='grid grid-cols-2   gap-4 my-5'>
         <InputText placeholder='Price' />
-        <TKSelect placeholder={'Condition'} arrList={Conditions} enableSearch={false} />
+        <TKSelect
+          placeholder={'Condition'}
+          arrList={Conditions}
+          enableSearch={false}
+        />
       </div>
       <p className='flex space-x-2 ml-5'>
         <input

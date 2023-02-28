@@ -8,7 +8,7 @@ const VideoGames = () => {
       <TKSelect placeholder='genre' />
       <TKSelect placeholder='platform' />
       <TKSelect placeholder='release year' />
-      <TKSelect placeholder='release year' />
+      <TKSelect placeholder='exchangleable' />
     </div>
   )
 }

@@ -3,8 +3,12 @@ import InputText from '../../Reusables/InputText'
 import TextArea from '../../Reusables/TextArea'
 import TKSelect from '../../Reusables/TKSelect'
 import { Conditions } from '../../utils/staticData'
+import AccessoriesElectronics from './Electronics/AccessoriesElectionics'
+import ComputerAccessories from './Computers/ComputerAccessories'
+import ComputerHardware from './Computers/ComputerHardware'
 import Accessories from './PhoneAndTablets/Accessories'
 import Tablets from './PhoneAndTablets/Tablets'
+import Headphones from './Electronics/Headphones'
 
 const AboutProduct = () => {
   const [checkState, setCheckState] = useState(false)
@@ -17,15 +21,10 @@ const AboutProduct = () => {
         <InputText placeholder='Title' required={true} />
       </div>
 
-      {/* if the category is mobile */}
-      {/* <MobilePhone /> */}
-
-      {/* if the category is smartwatches and trackers */}
-      {/* <SmartWatchANDTrackers /> */}
-
-      {/* <Tablets /> */}
-
-      <Accessories />
+      {/* <AccessoriesElectronics /> */}
+      {/* <ComputerAccessories /> */}
+      {/* <ComputerHardware /> */}
+      <Headphones />
 
       <div className='w-full'>
         <TextArea placeholder='Description*' />

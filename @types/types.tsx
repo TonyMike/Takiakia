@@ -34,3 +34,9 @@ export type productSelectionProps = {
   placeholder?: string
   list?: StringProps[]
 }
+
+export type inputMethodProps = {
+  method: string
+  placeholder?: any
+  validate?: any
+}

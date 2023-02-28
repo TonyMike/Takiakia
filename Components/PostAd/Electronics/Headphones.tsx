@@ -7,11 +7,11 @@ const Headphones = () => {
       <TKSelect placeholder='brand' />
       <InputText placeholder='model' />
       <TKSelect placeholder='type' />
-      <InputText placeholder='form factor' />
-      <InputText placeholder='connectivity' />
-      <InputText placeholder='connecting interface' />
-      <InputText placeholder='resistance (ohm)' />
-      <InputText placeholder='color' />
+      <TKSelect placeholder='form factor' />
+      <TKSelect placeholder='connectivity' />
+      <TKSelect placeholder='connecting interface' />
+      <TKSelect placeholder='resistance (ohm)' />
+      <TKSelect placeholder='color' />
     </div>
   )
 }

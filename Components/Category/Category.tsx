@@ -46,7 +46,7 @@ const Category = () => {
     { name: 'Electronics', icon: '/icons/electronics.png' },
     { name: 'computer', icon: '/icons/computer.png' },
     { name: 'fashion', icon: '/icons/fashion.png' },
-    { name: 'Sport', icon: '/icons/sport.png' },
+    { name: 'Sport & Arts', icon: '/icons/sport.png' },
     { name: 'Game', icon: '/icons/game.png' },
     { name: 'Beauty', icon: '/icons/beauty.png' },
     { name: 'Home & Appliances', icon: '/icons/home-appliance.png' },

@@ -1,12 +1,12 @@
 import TKSelect from '../../../Reusables/TKSelect'
 
-const VideoGameConsoles = () => {
+const Books_And_Games = () => {
   return (
     <div className='grid grid-cols-2 gap-6 my-5 '>
       <TKSelect placeholder='type' />
-      <TKSelect placeholder='exchangeable' />
+      <TKSelect placeholder='age level' />
     </div>
   )
 }
 
-export default VideoGameConsoles
+export default Books_And_Games
